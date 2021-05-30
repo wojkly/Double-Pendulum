@@ -80,6 +80,7 @@ CMakeFiles/Game-of-life.dir/Application.cpp.o: ../DoublePendulum.h
 CMakeFiles/Game-of-life.dir/Application.cpp.o: ../PendulumEquation.h
 CMakeFiles/Game-of-life.dir/Application.cpp.o: ../SFML/include/SFML/Graphics.hpp
 CMakeFiles/Game-of-life.dir/Application.cpp.o: ../SFML/include/SFML/Window.hpp
+CMakeFiles/Game-of-life.dir/Application.cpp.o: ../SFML/include/SFML/Window/Mouse.hpp
 CMakeFiles/Game-of-life.dir/Application.cpp.o: ../Simulation.h
 CMakeFiles/Game-of-life.dir/Application.cpp.o: ../config.h
 

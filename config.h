@@ -3,14 +3,14 @@
 
 
 #define SIM_DIMS 800
-
+#define MOUSE_Y_OFFSET 25
 
 #define GRAVITY 9.82f
 #define MASS1 1.0f
 #define MASS2 1.0f
-#define THETA1 2.5f
-#define THETA2 0.1f
-#define LENGTH1 1.0f
+#define THETA1 3.2f
+#define THETA2 0.0f
+#define LENGTH1 2.0f
 #define LENGTH2 1.0f
 
 

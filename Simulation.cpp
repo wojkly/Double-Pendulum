@@ -48,3 +48,7 @@ std::vector<double> Simulation::getPositions() {
 size_t Simulation::size() const {
     return size_;
 }
+
+void Simulation::setTheta1(int id, double theta1) {
+    pendulums[id].setTheta1(theta1);
+}

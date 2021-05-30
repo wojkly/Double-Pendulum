@@ -30,6 +30,7 @@
 ////////////////////////////////////////////////////////////
 #include <SFML/Window/Export.hpp>
 #include <SFML/System/Vector2.hpp>
+#include <SFML/Graphics/RenderWindow.hpp>
 
 
 namespace sf
@@ -101,7 +102,7 @@ public:
     /// \return Current position of the mouse
     ///
     ////////////////////////////////////////////////////////////
-    static Vector2i getPosition(const Window& relativeTo);
+    static Vector2i getPosition(sf::RenderWindow *relativeTo);
 
     ////////////////////////////////////////////////////////////
     /// \brief Set the current position of the mouse in desktop coordinates

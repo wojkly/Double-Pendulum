@@ -569,6 +569,8 @@ SFML/Window/Export.hpp
 -
 SFML/System/Vector2.hpp
 -
+SFML/Graphics/RenderWindow.hpp
+-
 
 ../SFML/include/SFML/Window/Sensor.hpp
 SFML/Window/Export.hpp
@@ -631,11 +633,15 @@ SFML/include/SFML/Graphics.hpp
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Graphics.hpp
 SFML/include/SFML/Window.hpp
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Window.hpp
+SFML/include/SFML/Window/Mouse.hpp
+/home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Window/Mouse.hpp
 Application.h
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/Application.h
 Simulation.h
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/Simulation.h
 vector
+-
+cmath
 -
 
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/Application.h
@@ -750,6 +756,14 @@ SFML/Window/Window.hpp
 SFML/Window/WindowHandle.hpp
 -
 SFML/Window/WindowStyle.hpp
+-
+
+/home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Window/Mouse.hpp
+SFML/Window/Export.hpp
+-
+SFML/System/Vector2.hpp
+-
+SFML/Graphics/RenderWindow.hpp
 -
 
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/Simulation.h

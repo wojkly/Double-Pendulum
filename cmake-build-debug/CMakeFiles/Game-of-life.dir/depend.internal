@@ -81,6 +81,7 @@ CMakeFiles/Game-of-life.dir/Application.cpp.o
  /home/wojkly/Documents/STUDIA/cpp/Game-of-life/PendulumEquation.h
  /home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Graphics.hpp
  /home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Window.hpp
+ /home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Window/Mouse.hpp
  /home/wojkly/Documents/STUDIA/cpp/Game-of-life/Simulation.h
  /home/wojkly/Documents/STUDIA/cpp/Game-of-life/config.h
 CMakeFiles/Game-of-life.dir/DoublePendulum.cpp.o

@@ -22,6 +22,7 @@ public:
     std::vector<unsigned int> getColors();
     std::vector<double> getPositions();
     size_t size() const;
+    void setTheta1(int id, double theta1);
 
 };
 
