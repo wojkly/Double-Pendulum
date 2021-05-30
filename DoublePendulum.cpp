@@ -8,7 +8,7 @@
 
 using namespace std;
 
-DoublePendulum::DoublePendulum(sf::Color c, PendulumEquation equation): equation(equation) {
+DoublePendulum::DoublePendulum(unsigned int c, PendulumEquation equation): equation(equation) {
     color = c;
 }
 
@@ -24,8 +24,16 @@ double DoublePendulum::getTheta2() const{
     return equation.getTheta2();
 }
 
-sf::Color DoublePendulum::getColor() {
+unsigned int DoublePendulum::getColor() const {
     return color;
+}
+
+void DoublePendulum::setTheta1(double th1) {
+    equation.setTheta1(th1);
+}
+
+void DoublePendulum::setTheta2(double th2) {
+    equation.setTheta2(th2);
 }
 
 std::ostream & operator<<(std::ostream & os, const DoublePendulum &pendulum){

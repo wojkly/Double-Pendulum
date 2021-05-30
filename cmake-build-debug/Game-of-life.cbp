@@ -102,6 +102,12 @@
 		<Unit filename="/home/wojkly/Documents/STUDIA/cpp/Game-of-life/PendulumEquation.h">
 			<Option target="Game-of-life"/>
 		</Unit>
+		<Unit filename="/home/wojkly/Documents/STUDIA/cpp/Game-of-life/Simulation.cpp">
+			<Option target="Game-of-life"/>
+		</Unit>
+		<Unit filename="/home/wojkly/Documents/STUDIA/cpp/Game-of-life/Simulation.h">
+			<Option target="Game-of-life"/>
+		</Unit>
 		<Unit filename="/home/wojkly/Documents/STUDIA/cpp/Game-of-life/config.h">
 			<Option target="Game-of-life"/>
 		</Unit>

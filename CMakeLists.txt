@@ -11,7 +11,7 @@ set(SFML_DIR "SFML/lib/cmake/SFML")
 set(CMAKE_MODULE_PATH "$(CMAKE_CURRENT_LIST_DIR)/cmake_modules")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
 find_package(SFML COMPONENTS audio graphics window system)
-add_executable(Game-of-life main.cpp config.h Application.cpp Application.h DoublePendulum.cpp DoublePendulum.h PendulumEquation.cpp PendulumEquation.h)
+add_executable(Game-of-life main.cpp config.h Application.cpp Application.h DoublePendulum.cpp DoublePendulum.h PendulumEquation.cpp PendulumEquation.h Simulation.cpp Simulation.h)
 
 if(SFML_FOUND)
     include_directories(${SFML_INCLUDE_DIR})

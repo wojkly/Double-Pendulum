@@ -7,31 +7,24 @@
 #include "SFML/include/SFML/Graphics.hpp"
 #include "SFML/include/SFML/Window.hpp"
 #include "Application.h"
-
-Application::Application() = default;
+#include "Simulation.h"
+#include <vector>
+Application::Application() {
+    L1Scaled = (float ) LENGTH1 / (LENGTH1 + LENGTH2) * middleX - SIM_DIMS / 50;
+    L2Scaled = (float ) LENGTH2 / (LENGTH1 + LENGTH2) * middleX - SIM_DIMS / 50;
+}
 
 using namespace std;
 using namespace sf;
 
+//todo add args
 void Application::initApp() {
-    RenderWindow simWindow( VideoMode(SIM_WIDTH,SIM_HEIGHT),"Pendulum Simulation");
-    simWindow.setVerticalSyncEnabled(true);
-    DoublePendulum pendulums[PENDULUM_COUNT];
-    for (int i = 0; i < PENDULUM_COUNT; ++i) {
-        pendulums[i] = DoublePendulum(Color(i, 0, 150), PendulumEquation(THETA1 + 0.00001*i,THETA2 + 0.00001*i));
-    }
-//    DoublePendulum pendulum(sf::Color::Green, PendulumEquation(THETA1,THETA2));
+    Simulation simulation(1,0.0001,0.005);
 
-    float middleX = (float )SIM_WIDTH / 2;
-    float middleY = (float )SIM_HEIGHT / 2;
-    float circleRadius = 5;
-    float L1Scaled = (float ) LENGTH1 / (LENGTH1 + LENGTH2) * middleX;
-    float L2Scaled = (float ) LENGTH2 / (LENGTH1 + LENGTH2) * middleX;
-    VertexArray lines(LineStrip, 3);
-    CircleShape circle0;
-    circle0.setRadius(circleRadius);
-    circle0.setPosition(middleX - circleRadius, middleY - circleRadius);
-    circle0.setFillColor(Color::Red);
+
+    RenderWindow simWindow( VideoMode(SIM_DIMS,SIM_DIMS),"Pendulum Simulation");
+    simWindow.setVerticalSyncEnabled(true);
+    unsigned int debug=0;
     while (simWindow.isOpen())
     {
         sf::Event event{};
@@ -41,29 +34,47 @@ void Application::initApp() {
                 simWindow.close();
         }
         simWindow.clear();
-        for (auto & pendulum : pendulums) {
-            double theta1 = pendulum.getTheta1();
-            double theta2 = pendulum.getTheta2();
-            double x1, y1, x2, y2;
-            x1 = middleX - L1Scaled*sin(theta1);
-            y1 = middleY + L1Scaled*cos(theta1);
-            x2 = x1 - L2Scaled*sin(theta2);
-            y2 = y1 + L2Scaled*cos(theta2);
-            Color color = pendulum.getColor();
-            lines[0].position = Vector2f(middleX,middleY);
-            lines[0].color = color;
-            lines[1].position = Vector2f(x1, y1);
-            lines[1].color = color;
-            lines[2].position = Vector2f(x2, y2);
-            lines[2].color = color;
-            simWindow.draw(lines);
-
-            pendulum.makeStep(0.005);
-        }
+        drawPendulums(simWindow, simulation, debug);
+        debug++;
+        simulation.step();
         simWindow.display();
-
-
-//        usleep(100);
-//        cout << pendulum;
     }
+}
+
+void Application::handleMouse() {
+
+}
+
+void Application::drawPendulums(sf::RenderWindow &window, Simulation &simulation, unsigned int debug) {
+    vector<unsigned int> colors = simulation.getColors();
+    vector<double> thetas = simulation.getPositions();
+    double theta1, theta2, x1, y1, x2, y2;
+    unsigned int color;
+    VertexArray lines(LineStrip, 3);
+    for (int i = 0; i < simulation.size();  i++) {
+        theta1 = thetas[2*i];
+        theta2 = thetas[2*i+1];
+        color = colors[i];
+
+        x1 = middleX - L1Scaled*sin(theta1);
+        y1 = middleY + L1Scaled*cos(theta1);
+        x2 = x1 - L2Scaled*sin(theta2);
+        y2 = y1 + L2Scaled*cos(theta2);
+//        if (debug % 25 == 0)
+//            cout<<x1<<" "<<y1<<" "<<x2<<" "<<y2<<endl;
+//        if (debug % 25 == 0)
+//            cout<<theta1<<" "<<theta2<<" "<<endl;
+
+        lines[0].position = Vector2f(middleX,middleY);
+        lines[0].color = Color(color);
+        lines[1].position = Vector2f(x1, y1);
+        lines[1].color = Color(color);
+        lines[2].position = Vector2f(x2, y2);
+        lines[2].color = Color(color);
+        window.draw(lines);
+    }
+//    if (debug % 25 == 0) {
+//        cout << "============================" << endl;
+//        sleep(5);
+//    }
 }

@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/wojkly/Documents/STUDIA/cpp/Game-of-life/Application.cpp" "/home/wojkly/Documents/STUDIA/cpp/Game-of-life/cmake-build-debug/CMakeFiles/Game-of-life.dir/Application.cpp.o"
   "/home/wojkly/Documents/STUDIA/cpp/Game-of-life/DoublePendulum.cpp" "/home/wojkly/Documents/STUDIA/cpp/Game-of-life/cmake-build-debug/CMakeFiles/Game-of-life.dir/DoublePendulum.cpp.o"
   "/home/wojkly/Documents/STUDIA/cpp/Game-of-life/PendulumEquation.cpp" "/home/wojkly/Documents/STUDIA/cpp/Game-of-life/cmake-build-debug/CMakeFiles/Game-of-life.dir/PendulumEquation.cpp.o"
+  "/home/wojkly/Documents/STUDIA/cpp/Game-of-life/Simulation.cpp" "/home/wojkly/Documents/STUDIA/cpp/Game-of-life/cmake-build-debug/CMakeFiles/Game-of-life.dir/Simulation.cpp.o"
   "/home/wojkly/Documents/STUDIA/cpp/Game-of-life/main.cpp" "/home/wojkly/Documents/STUDIA/cpp/Game-of-life/cmake-build-debug/CMakeFiles/Game-of-life.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

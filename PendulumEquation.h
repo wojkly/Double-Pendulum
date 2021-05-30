@@ -19,6 +19,8 @@ public:
     void makeStep(double delta);
     double getTheta1() const;
     double getTheta2() const;
+    void setTheta1(double th1);
+    void setTheta2(double th2);
 };
 
 

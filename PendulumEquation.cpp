@@ -5,6 +5,7 @@
 #include "PendulumEquation.h"
 #include "config.h"
 #include <cmath>
+#include <iostream>
 
 PendulumEquation::PendulumEquation(double th1, double th2) {
     theta1 = th1;
@@ -30,6 +31,7 @@ void PendulumEquation::makeStep(double delta) {
     theta2 = theta2 + delta * w2;
     w1 = w1 + delta * w1Prim();
     w2 = w2 + delta * w2Prim();
+//    std::cout<<theta1<<" "<<theta2<<std::endl;
 }
 
 double PendulumEquation::getTheta1() const {
@@ -38,6 +40,17 @@ double PendulumEquation::getTheta1() const {
 
 double PendulumEquation::getTheta2() const {
     return theta2;
+}
+
+void PendulumEquation::setTheta1(double th1) {
+    theta1 = th1;
+    w1 = 0;
+    w2 = 0;
+}
+void PendulumEquation::setTheta2(double th2) {
+    theta2 = th2;
+    w1 = 0;
+    w2 = 0;
 }
 
 

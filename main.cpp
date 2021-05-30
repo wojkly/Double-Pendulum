@@ -1,7 +1,9 @@
 #include "Application.h"
 
 int main() {
+    //todo get parameters form the console
+
     Application application;
-    Application::initApp();
+    application.initApp();
     exit(EXIT_SUCCESS);
 }

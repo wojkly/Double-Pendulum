@@ -11,14 +11,16 @@
 
 class DoublePendulum {
     PendulumEquation equation;
-    sf::Color color;
+    unsigned int color;
 public:
     DoublePendulum() = default;
-    DoublePendulum(sf::Color c, PendulumEquation equation);
+    DoublePendulum(unsigned int c, PendulumEquation equation);
     void makeStep(double delta);
     double getTheta1() const;
     double getTheta2() const;
-    sf::Color getColor();
+    void setTheta1(double th1);
+    void setTheta2(double th2);
+    unsigned int getColor() const;
 };
 
 std::ostream & operator<<(std::ostream & os, const DoublePendulum &pendulum);

@@ -14,11 +14,19 @@
 #include "SFML/include/SFML/Window.hpp"
 #include "config.h"
 #include "DoublePendulum.h"
+#include "Simulation.h"
+#include <vector>
 
 class Application {
+    float middleX{(float )SIM_DIMS / 2};
+    float middleY{(float )SIM_DIMS / 2};
+    float L1Scaled;
+    float L2Scaled;
 public:
     Application();
-    static void initApp();
+    void initApp();
+    void drawPendulums(sf::RenderWindow &window, Simulation &simulation, unsigned int debug);
+    void handleMouse();
 };
 
 

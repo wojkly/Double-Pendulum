@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Game-of-life.dir/Application.cpp.o"
   "CMakeFiles/Game-of-life.dir/DoublePendulum.cpp.o"
   "CMakeFiles/Game-of-life.dir/PendulumEquation.cpp.o"
+  "CMakeFiles/Game-of-life.dir/Simulation.cpp.o"
   "CMakeFiles/Game-of-life.dir/main.cpp.o"
 )
 

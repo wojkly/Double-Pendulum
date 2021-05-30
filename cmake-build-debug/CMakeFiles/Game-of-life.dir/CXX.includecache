@@ -633,6 +633,10 @@ SFML/include/SFML/Window.hpp
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Window.hpp
 Application.h
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/Application.h
+Simulation.h
+/home/wojkly/Documents/STUDIA/cpp/Game-of-life/Simulation.h
+vector
+-
 
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/Application.h
 SFML/include/SFML/Graphics.hpp
@@ -643,6 +647,10 @@ config.h
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/config.h
 DoublePendulum.h
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/DoublePendulum.h
+Simulation.h
+/home/wojkly/Documents/STUDIA/cpp/Game-of-life/Simulation.h
+vector
+-
 
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/DoublePendulum.h
 iosfwd
@@ -742,6 +750,18 @@ SFML/Window/Window.hpp
 SFML/Window/WindowHandle.hpp
 -
 SFML/Window/WindowStyle.hpp
+-
+
+/home/wojkly/Documents/STUDIA/cpp/Game-of-life/Simulation.h
+config.h
+/home/wojkly/Documents/STUDIA/cpp/Game-of-life/config.h
+DoublePendulum.h
+/home/wojkly/Documents/STUDIA/cpp/Game-of-life/DoublePendulum.h
+SFML/include/SFML/Graphics.hpp
+/home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Graphics.hpp
+SFML/include/SFML/Window.hpp
+/home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Window.hpp
+vector
 -
 
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/config.h
