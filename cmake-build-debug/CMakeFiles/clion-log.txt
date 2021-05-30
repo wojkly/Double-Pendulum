@@ -1,0 +1,5 @@
+/home/wojkly/clion-2020.3.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/wojkly/Documents/STUDIA/cpp/Game-of-life
+-- Found SFML 2.5.1 in /home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/lib/cmake/SFML
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/wojkly/Documents/STUDIA/cpp/Game-of-life/cmake-build-debug
