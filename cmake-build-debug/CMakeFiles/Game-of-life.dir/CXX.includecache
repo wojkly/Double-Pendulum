@@ -641,8 +641,6 @@ Simulation.h
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/Simulation.h
 vector
 -
-cmath
--
 
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/Application.h
 SFML/include/SFML/Graphics.hpp

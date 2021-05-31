@@ -4,6 +4,9 @@
 
 #define SIM_DIMS 800
 #define MOUSE_Y_OFFSET 25
+#define MOUSE_PENDULUM_MAX_DIST 50
+
+//#define MOUSE_PENDULUM_TWO_MAX_DIST 40
 
 #define GRAVITY 9.82f
 #define MASS1 1.0f

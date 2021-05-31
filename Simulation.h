@@ -21,8 +21,10 @@ public:
     void step();
     std::vector<unsigned int> getColors();
     std::vector<double> getPositions();
+    double getTheta1(unsigned int id);
     size_t size() const;
     void setTheta1(int id, double theta1);
+    void setTheta2(int id, double theta2);
 
 };
 

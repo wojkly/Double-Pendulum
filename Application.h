@@ -26,10 +26,16 @@ public:
     Application();
     void initApp();
     void drawPendulums(sf::RenderWindow &window, Simulation &simulation, unsigned int debug);
+
     void handleMouse(unsigned int mouseX, unsigned int mouseY);
-    int pendulumOneGrabbed(sf::RenderWindow &window, Simulation &simulation, unsigned int debug);
-    void pendulumOneMove(sf::RenderWindow &window, Simulation &simulation, unsigned int  grabbed_id, unsigned int debug);
-    double getMouseThetaOne(double x, double y);
+
+    int pendulumGrabbed(sf::RenderWindow &window, Simulation &simulation, unsigned int debug);
+    double getMouseTheta(double x, double y, double xRelativeTo, double yRelativeTo);
+    void pendulumMove(sf::RenderWindow &window, Simulation &simulation, unsigned int  grabbed_id, unsigned int debug);
+
+//    int pendulumTwoGrabbed(sf::RenderWindow &window, Simulation &simulation, unsigned int debug);
+//    double getMouseThetaTwo(double x, double y, double xMiddle, double yMiddle);
+//    void pendulumTwoMove(sf::RenderWindow &window, Simulation &simulation, unsigned int  grabbed_id, unsigned int debug);
 };
 
 
