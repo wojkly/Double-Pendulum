@@ -666,6 +666,16 @@ SFML/include/SFML/Window.hpp
 PendulumEquation.h
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/PendulumEquation.h
 
+/home/wojkly/Documents/STUDIA/cpp/Game-of-life/PendulumEquation.cpp
+PendulumEquation.h
+/home/wojkly/Documents/STUDIA/cpp/Game-of-life/PendulumEquation.h
+config.h
+/home/wojkly/Documents/STUDIA/cpp/Game-of-life/config.h
+cmath
+-
+iostream
+-
+
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/PendulumEquation.h
 
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Graphics.hpp
@@ -764,6 +774,14 @@ SFML/System/Vector2.hpp
 SFML/Graphics/RenderWindow.hpp
 -
 
+/home/wojkly/Documents/STUDIA/cpp/Game-of-life/Simulation.cpp
+Simulation.h
+/home/wojkly/Documents/STUDIA/cpp/Game-of-life/Simulation.h
+SFML/include/SFML/Graphics.hpp
+/home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Graphics.hpp
+SFML/include/SFML/Window.hpp
+/home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Window.hpp
+
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/Simulation.h
 config.h
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/config.h
@@ -777,4 +795,8 @@ vector
 -
 
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/config.h
+
+/home/wojkly/Documents/STUDIA/cpp/Game-of-life/main.cpp
+Application.h
+/home/wojkly/Documents/STUDIA/cpp/Game-of-life/Application.h
 

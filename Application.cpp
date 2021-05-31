@@ -30,6 +30,7 @@ int Application::pendulumGrabbed(RenderWindow &window, Simulation &simulation, u
     mouseX = mousePos.x - windowPos.x;
     mouseY = mousePos.y - windowPos.y - MOUSE_Y_OFFSET;
 
+    //todo use single getters instead of all-at-once
     vector<double> thetas = simulation.getPositions();
     double theta1, theta2, x1, y1, x2, y2, minDistance = 1000.0, distance;
     int grabbedID = -1;
@@ -97,6 +98,7 @@ void Application::pendulumMove(RenderWindow &window, Simulation &simulation, uns
     }
     else{
         grabbed_id -= simulation.size();
+        //todo use single getters instead of all-at-once
         x1 = middleX - L1Scaled*sin(simulation.getTheta1(grabbed_id));
         y1 = middleY + L1Scaled*cos(simulation.getTheta1(grabbed_id));
         theta = getMouseTheta(mouseX,mouseY,x1,y1);
@@ -108,9 +110,10 @@ void Application::pendulumMove(RenderWindow &window, Simulation &simulation, uns
 
 //todo add args
 void Application::initApp() {
-    Simulation simulation(50,0.001,0.005);
-    RenderWindow simWindow( VideoMode(SIM_DIMS,SIM_DIMS),"Pendulum Simulation");
+    Simulation simulation(1,0.001,0.005);
+    RenderWindow simWindow( VideoMode(SIM_DIMS,SIM_DIMS),"Double Pendulum Simulation");
     simWindow.setVerticalSyncEnabled(true);
+    //todo remove debug variable
     unsigned int debug=0;
     bool mouse_released;
     int grabbed_id = -1;
@@ -122,6 +125,7 @@ void Application::initApp() {
             if (event.type == Event::Closed)
                 simWindow.close();
             if (event.type == Event::MouseButtonPressed) {
+                //todo copy that into mouse pressed handler
                 grabbed_id = pendulumGrabbed(simWindow, simulation, debug);
                 cout<<grabbed_id<<endl;
                 if (grabbed_id != -1) {
@@ -159,27 +163,25 @@ void Application::drawPendulums(sf::RenderWindow &window, Simulation &simulation
     vector<unsigned int> colors = simulation.getColors();
     vector<double> thetas = simulation.getPositions();
     double theta1, theta2, x1, y1, x2, y2;
-    unsigned int color;
+    Color color;
     VertexArray lines(LineStrip, 3);
     for (int i = 0; i < simulation.size();  i++) {
         theta1 = thetas[2*i];
         theta2 = thetas[2*i+1];
-        color = colors[i];
-
+        color = Color(colors[i]);
+        //todo use single getters instead of all-at-once
         x1 = middleX - L1Scaled*sin(theta1);
         y1 = middleY + L1Scaled*cos(theta1);
         x2 = x1 - L2Scaled*sin(theta2);
         y2 = y1 + L2Scaled*cos(theta2);
 
         lines[0].position = Vector2f(middleX,middleY);
-        lines[0].color = Color(color);
+        lines[0].color = color;
         lines[1].position = Vector2f(x1, y1);
-        lines[1].color = Color(color);
+        lines[1].color = color;
         lines[2].position = Vector2f(x2, y2);
-        lines[2].color = Color(color);
+        lines[2].color = color;
+        //todo draw circles in the middle, at the end itd. proportional to mass
         window.draw(lines);
     }
 }
-
-
-

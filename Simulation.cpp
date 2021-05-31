@@ -113,3 +113,4 @@ void Simulation::setTheta2(int id, double theta2) {
 double Simulation::getTheta1(unsigned int id) {
     return pendulums[id].getTheta1();
 }
+//todo getTheta2

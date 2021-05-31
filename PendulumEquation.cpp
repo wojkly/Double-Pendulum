@@ -11,7 +11,7 @@ PendulumEquation::PendulumEquation(double th1, double th2) {
     theta1 = th1;
     theta2 = th2;
 }
-
+//todo ????? add runge-kutta method?? (least important one)
 double PendulumEquation::w1Prim() const {
     double result = 0;
     result -= GRAVITY*(2*MASS1 + MASS2)*sin(theta1);

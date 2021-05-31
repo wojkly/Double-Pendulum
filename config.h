@@ -8,12 +8,12 @@
 
 //#define MOUSE_PENDULUM_TWO_MAX_DIST 40
 
-#define GRAVITY 9.82f
+#define GRAVITY 29.82f
 #define MASS1 1.0f
-#define MASS2 1.0f
+#define MASS2 5.0f
 #define THETA1 3.2f
 #define THETA2 0.0f
-#define LENGTH1 2.0f
+#define LENGTH1 1.0f
 #define LENGTH2 1.0f
 
 
