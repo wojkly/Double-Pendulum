@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include 
+CXX_INCLUDES = -isystem /home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/SFML/include 
 

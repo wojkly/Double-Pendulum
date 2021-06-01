@@ -68,24 +68,13 @@ RM = /home/wojkly/clion-2020.3.3/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wojkly/Documents/STUDIA/cpp/Game-of-life
+CMAKE_SOURCE_DIR = /home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wojkly/Documents/STUDIA/cpp/Game-of-life/cmake-build-debug
+CMAKE_BINARY_DIR = /home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/wojkly/clion-2020.3.3/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -98,11 +87,22 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/home/wojkly/clion-2020.3.3/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wojkly/Documents/STUDIA/cpp/Game-of-life/cmake-build-debug/CMakeFiles /home/wojkly/Documents/STUDIA/cpp/Game-of-life/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/cmake-build-debug/CMakeFiles /home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wojkly/Documents/STUDIA/cpp/Game-of-life/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -131,17 +131,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Game-of-life
+# Target rules for targets named Double-Pendulum-Simulation
 
 # Build rule for target.
-Game-of-life: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Game-of-life
-.PHONY : Game-of-life
+Double-Pendulum-Simulation: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Double-Pendulum-Simulation
+.PHONY : Double-Pendulum-Simulation
 
 # fast build rule for target.
-Game-of-life/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game-of-life.dir/build.make CMakeFiles/Game-of-life.dir/build
-.PHONY : Game-of-life/fast
+Double-Pendulum-Simulation/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Double-Pendulum-Simulation.dir/build.make CMakeFiles/Double-Pendulum-Simulation.dir/build
+.PHONY : Double-Pendulum-Simulation/fast
 
 Application.o: Application.cpp.o
 
@@ -149,7 +149,7 @@ Application.o: Application.cpp.o
 
 # target to build an object file
 Application.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game-of-life.dir/build.make CMakeFiles/Game-of-life.dir/Application.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Double-Pendulum-Simulation.dir/build.make CMakeFiles/Double-Pendulum-Simulation.dir/Application.cpp.o
 .PHONY : Application.cpp.o
 
 Application.i: Application.cpp.i
@@ -158,7 +158,7 @@ Application.i: Application.cpp.i
 
 # target to preprocess a source file
 Application.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game-of-life.dir/build.make CMakeFiles/Game-of-life.dir/Application.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Double-Pendulum-Simulation.dir/build.make CMakeFiles/Double-Pendulum-Simulation.dir/Application.cpp.i
 .PHONY : Application.cpp.i
 
 Application.s: Application.cpp.s
@@ -167,7 +167,7 @@ Application.s: Application.cpp.s
 
 # target to generate assembly for a file
 Application.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game-of-life.dir/build.make CMakeFiles/Game-of-life.dir/Application.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Double-Pendulum-Simulation.dir/build.make CMakeFiles/Double-Pendulum-Simulation.dir/Application.cpp.s
 .PHONY : Application.cpp.s
 
 ArgumentParser.o: ArgumentParser.cpp.o
@@ -176,7 +176,7 @@ ArgumentParser.o: ArgumentParser.cpp.o
 
 # target to build an object file
 ArgumentParser.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game-of-life.dir/build.make CMakeFiles/Game-of-life.dir/ArgumentParser.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Double-Pendulum-Simulation.dir/build.make CMakeFiles/Double-Pendulum-Simulation.dir/ArgumentParser.cpp.o
 .PHONY : ArgumentParser.cpp.o
 
 ArgumentParser.i: ArgumentParser.cpp.i
@@ -185,7 +185,7 @@ ArgumentParser.i: ArgumentParser.cpp.i
 
 # target to preprocess a source file
 ArgumentParser.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game-of-life.dir/build.make CMakeFiles/Game-of-life.dir/ArgumentParser.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Double-Pendulum-Simulation.dir/build.make CMakeFiles/Double-Pendulum-Simulation.dir/ArgumentParser.cpp.i
 .PHONY : ArgumentParser.cpp.i
 
 ArgumentParser.s: ArgumentParser.cpp.s
@@ -194,7 +194,7 @@ ArgumentParser.s: ArgumentParser.cpp.s
 
 # target to generate assembly for a file
 ArgumentParser.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game-of-life.dir/build.make CMakeFiles/Game-of-life.dir/ArgumentParser.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Double-Pendulum-Simulation.dir/build.make CMakeFiles/Double-Pendulum-Simulation.dir/ArgumentParser.cpp.s
 .PHONY : ArgumentParser.cpp.s
 
 DoublePendulum.o: DoublePendulum.cpp.o
@@ -203,7 +203,7 @@ DoublePendulum.o: DoublePendulum.cpp.o
 
 # target to build an object file
 DoublePendulum.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game-of-life.dir/build.make CMakeFiles/Game-of-life.dir/DoublePendulum.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Double-Pendulum-Simulation.dir/build.make CMakeFiles/Double-Pendulum-Simulation.dir/DoublePendulum.cpp.o
 .PHONY : DoublePendulum.cpp.o
 
 DoublePendulum.i: DoublePendulum.cpp.i
@@ -212,7 +212,7 @@ DoublePendulum.i: DoublePendulum.cpp.i
 
 # target to preprocess a source file
 DoublePendulum.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game-of-life.dir/build.make CMakeFiles/Game-of-life.dir/DoublePendulum.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Double-Pendulum-Simulation.dir/build.make CMakeFiles/Double-Pendulum-Simulation.dir/DoublePendulum.cpp.i
 .PHONY : DoublePendulum.cpp.i
 
 DoublePendulum.s: DoublePendulum.cpp.s
@@ -221,7 +221,7 @@ DoublePendulum.s: DoublePendulum.cpp.s
 
 # target to generate assembly for a file
 DoublePendulum.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game-of-life.dir/build.make CMakeFiles/Game-of-life.dir/DoublePendulum.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Double-Pendulum-Simulation.dir/build.make CMakeFiles/Double-Pendulum-Simulation.dir/DoublePendulum.cpp.s
 .PHONY : DoublePendulum.cpp.s
 
 PendulumEquation.o: PendulumEquation.cpp.o
@@ -230,7 +230,7 @@ PendulumEquation.o: PendulumEquation.cpp.o
 
 # target to build an object file
 PendulumEquation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game-of-life.dir/build.make CMakeFiles/Game-of-life.dir/PendulumEquation.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Double-Pendulum-Simulation.dir/build.make CMakeFiles/Double-Pendulum-Simulation.dir/PendulumEquation.cpp.o
 .PHONY : PendulumEquation.cpp.o
 
 PendulumEquation.i: PendulumEquation.cpp.i
@@ -239,7 +239,7 @@ PendulumEquation.i: PendulumEquation.cpp.i
 
 # target to preprocess a source file
 PendulumEquation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game-of-life.dir/build.make CMakeFiles/Game-of-life.dir/PendulumEquation.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Double-Pendulum-Simulation.dir/build.make CMakeFiles/Double-Pendulum-Simulation.dir/PendulumEquation.cpp.i
 .PHONY : PendulumEquation.cpp.i
 
 PendulumEquation.s: PendulumEquation.cpp.s
@@ -248,7 +248,7 @@ PendulumEquation.s: PendulumEquation.cpp.s
 
 # target to generate assembly for a file
 PendulumEquation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game-of-life.dir/build.make CMakeFiles/Game-of-life.dir/PendulumEquation.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Double-Pendulum-Simulation.dir/build.make CMakeFiles/Double-Pendulum-Simulation.dir/PendulumEquation.cpp.s
 .PHONY : PendulumEquation.cpp.s
 
 Simulation.o: Simulation.cpp.o
@@ -257,7 +257,7 @@ Simulation.o: Simulation.cpp.o
 
 # target to build an object file
 Simulation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game-of-life.dir/build.make CMakeFiles/Game-of-life.dir/Simulation.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Double-Pendulum-Simulation.dir/build.make CMakeFiles/Double-Pendulum-Simulation.dir/Simulation.cpp.o
 .PHONY : Simulation.cpp.o
 
 Simulation.i: Simulation.cpp.i
@@ -266,7 +266,7 @@ Simulation.i: Simulation.cpp.i
 
 # target to preprocess a source file
 Simulation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game-of-life.dir/build.make CMakeFiles/Game-of-life.dir/Simulation.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Double-Pendulum-Simulation.dir/build.make CMakeFiles/Double-Pendulum-Simulation.dir/Simulation.cpp.i
 .PHONY : Simulation.cpp.i
 
 Simulation.s: Simulation.cpp.s
@@ -275,7 +275,7 @@ Simulation.s: Simulation.cpp.s
 
 # target to generate assembly for a file
 Simulation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game-of-life.dir/build.make CMakeFiles/Game-of-life.dir/Simulation.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Double-Pendulum-Simulation.dir/build.make CMakeFiles/Double-Pendulum-Simulation.dir/Simulation.cpp.s
 .PHONY : Simulation.cpp.s
 
 main.o: main.cpp.o
@@ -284,7 +284,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game-of-life.dir/build.make CMakeFiles/Game-of-life.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Double-Pendulum-Simulation.dir/build.make CMakeFiles/Double-Pendulum-Simulation.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -293,7 +293,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game-of-life.dir/build.make CMakeFiles/Game-of-life.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Double-Pendulum-Simulation.dir/build.make CMakeFiles/Double-Pendulum-Simulation.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -302,7 +302,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game-of-life.dir/build.make CMakeFiles/Game-of-life.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Double-Pendulum-Simulation.dir/build.make CMakeFiles/Double-Pendulum-Simulation.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -313,7 +313,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Game-of-life"
+	@echo "... Double-Pendulum-Simulation"
 	@echo "... Application.o"
 	@echo "... Application.i"
 	@echo "... Application.s"

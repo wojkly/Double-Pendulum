@@ -2,8 +2,8 @@
 // Created by wojkly on 5/30/21.
 //
 
-#ifndef GAME_OF_LIFE_SIMULATION_H
-#define GAME_OF_LIFE_SIMULATION_H
+#ifndef DOUBLE_PENDULUM_SIMULATION_SIMULATION_H
+#define DOUBLE_PENDULUM_SIMULATION_SIMULATION_H
 
 #include "config.h"
 #include "DoublePendulum.h"
@@ -32,4 +32,4 @@ public:
 };
 
 
-#endif //GAME_OF_LIFE_SIMULATION_H
+#endif //DOUBLE_PENDULUM_SIMULATION_SIMULATION_H

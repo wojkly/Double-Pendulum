@@ -622,7 +622,7 @@ SFML/Config.hpp
 
 ../SFML/include/SFML/Window/WindowStyle.hpp
 
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/Application.cpp
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/Application.cpp
 iostream
 -
 unistd.h
@@ -630,35 +630,39 @@ unistd.h
 cmath
 -
 SFML/include/SFML/Graphics.hpp
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Graphics.hpp
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/SFML/include/SFML/Graphics.hpp
 SFML/include/SFML/Window.hpp
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Window.hpp
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/SFML/include/SFML/Window.hpp
 SFML/include/SFML/Window/Mouse.hpp
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Window/Mouse.hpp
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/SFML/include/SFML/Window/Mouse.hpp
 Application.h
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/Application.h
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/Application.h
 Simulation.h
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/Simulation.h
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/Simulation.h
 vector
 -
 
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/Application.h
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/Application.h
 SFML/include/SFML/Graphics.hpp
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Graphics.hpp
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/SFML/include/SFML/Graphics.hpp
 SFML/include/SFML/Window.hpp
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Window.hpp
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/SFML/include/SFML/Window.hpp
 config.h
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/config.h
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/config.h
 DoublePendulum.h
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/DoublePendulum.h
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/DoublePendulum.h
 Simulation.h
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/Simulation.h
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/Simulation.h
 ArgumentParser.h
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/ArgumentParser.h
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/ArgumentParser.h
 vector
 -
 
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/ArgumentParser.h
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/ArgumentParser.cpp
+ArgumentParser.h
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/ArgumentParser.h
+
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/ArgumentParser.h
 iostream
 -
 fstream
@@ -666,19 +670,37 @@ fstream
 string
 -
 
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/DoublePendulum.h
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/DoublePendulum.cpp
+iostream
+-
+DoublePendulum.h
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/DoublePendulum.h
+PendulumEquation.h
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/PendulumEquation.h
+
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/DoublePendulum.h
 iosfwd
 -
 SFML/include/SFML/Graphics.hpp
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Graphics.hpp
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/SFML/include/SFML/Graphics.hpp
 SFML/include/SFML/Window.hpp
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Window.hpp
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/SFML/include/SFML/Window.hpp
 PendulumEquation.h
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/PendulumEquation.h
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/PendulumEquation.h
 
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/PendulumEquation.h
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/PendulumEquation.cpp
+PendulumEquation.h
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/PendulumEquation.h
+config.h
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/config.h
+cmath
+-
+iostream
+-
 
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Graphics.hpp
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/PendulumEquation.h
+
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/SFML/include/SFML/Graphics.hpp
 SFML/Window.hpp
 -
 SFML/Graphics/BlendMode.hpp
@@ -734,7 +756,7 @@ SFML/Graphics/VertexBuffer.hpp
 SFML/Graphics/View.hpp
 -
 
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Window.hpp
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/SFML/include/SFML/Window.hpp
 SFML/System.hpp
 -
 SFML/Window/Clipboard.hpp
@@ -766,7 +788,7 @@ SFML/Window/WindowHandle.hpp
 SFML/Window/WindowStyle.hpp
 -
 
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Window/Mouse.hpp
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/SFML/include/SFML/Window/Mouse.hpp
 SFML/Window/Export.hpp
 -
 SFML/System/Vector2.hpp
@@ -774,25 +796,25 @@ SFML/System/Vector2.hpp
 SFML/Graphics/RenderWindow.hpp
 -
 
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/Simulation.cpp
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/Simulation.cpp
 Simulation.h
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/Simulation.h
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/Simulation.h
 
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/Simulation.h
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/Simulation.h
 config.h
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/config.h
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/config.h
 DoublePendulum.h
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/DoublePendulum.h
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/DoublePendulum.h
 ArgumentParser.h
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/ArgumentParser.h
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/ArgumentParser.h
 vector
 -
 
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/config.h
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/config.h
 
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/main.cpp
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/main.cpp
 Application.h
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/Application.h
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/Application.h
 ArgumentParser.h
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/ArgumentParser.h
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/ArgumentParser.h
 

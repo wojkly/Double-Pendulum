@@ -2,8 +2,8 @@
 // Created by wojkly on 5/29/21.
 //
 
-#ifndef GAME_OF_LIFE_DOUBLEPENDULUM_H
-#define GAME_OF_LIFE_DOUBLEPENDULUM_H
+#ifndef DOUBLE_PENDULUM_SIMULATION_DOUBLEPENDULUM_H
+#define DOUBLE_PENDULUM_SIMULATION_DOUBLEPENDULUM_H
 #include <iosfwd>
 #include "SFML/include/SFML/Graphics.hpp"
 #include "SFML/include/SFML/Window.hpp"
@@ -25,4 +25,4 @@ public:
 
 std::ostream & operator<<(std::ostream & os, const DoublePendulum &pendulum);
 
-#endif //GAME_OF_LIFE_DOUBLEPENDULUM_H
+#endif //DOUBLE_PENDULUM_SIMULATION_DOUBLEPENDULUM_H
