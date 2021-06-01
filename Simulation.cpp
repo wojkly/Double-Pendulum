@@ -7,14 +7,18 @@
 //#include "SFML/include/SFML/Window.hpp"
 //using namespace sf;
 
-Simulation::Simulation(int n, double posDiff, double d) {
-    size_ = n;
-    delta = d;
-    pendulums = new DoublePendulum[n];
+Simulation::Simulation(ArgumentParser argumentParser) {
+    size_ = argumentParser.getPendulumCount();
+    delta = argumentParser.getTimeInterval();
+    pendulums = new DoublePendulum[size_];
 
-    int n_sixth = n / 6;
-    int calor_value = 255 * 6 / n;
-    for (int i = 0; i < n; ++i) {
+    double initTheta1 = argumentParser.getThetaInit1();
+    double initTheta2 = argumentParser.getThetaInit2();
+    double posDiff = argumentParser.getPendulumInitPositionDifference();
+
+    int n_sixth = size_ / 6;
+    int calor_value = 255 * 6 / size_;
+    for (int i = 0; i < size_; ++i) {
         unsigned int red,green,blue,alpha;
         int k;
         //start from RGB = 0,1,0
@@ -61,7 +65,7 @@ Simulation::Simulation(int n, double posDiff, double d) {
             blue = 0;
         }
         alpha = 255;
-        pendulums[i] = DoublePendulum(alpha + 256*(blue + 256 *(green + 256* red)), PendulumEquation(THETA1 + posDiff*i,THETA2 + posDiff*i));
+        pendulums[i] = DoublePendulum(alpha + 256*(blue + 256 *(green + 256* red)), PendulumEquation(initTheta1 + posDiff*i,initTheta2 + posDiff*i));
     }
 }
 

@@ -4,6 +4,12 @@ mouseYoffset
 25
 mouseGrabThreshhold
 50
+pendulumCount
+100
+pendulumInitPositionDifference
+0.02
+timeInterval
+0.004
 gravity
 9.82
 mass1

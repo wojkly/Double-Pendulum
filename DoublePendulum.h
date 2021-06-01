@@ -11,7 +11,7 @@
 
 class DoublePendulum {
     PendulumEquation equation;
-    unsigned int color;
+    unsigned int color{};
 public:
     DoublePendulum() = default;
     DoublePendulum(unsigned int c, PendulumEquation equation);

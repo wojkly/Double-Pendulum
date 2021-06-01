@@ -19,12 +19,15 @@
 #include <vector>
 
 class Application {
-    float middleX{(float )SIM_DIMS / 2};
-    float middleY{(float )SIM_DIMS / 2};
-    float L1Scaled;
-    float L2Scaled;
+    unsigned int simDims;
+    unsigned int mouseYoffset;
+    unsigned int mouseGrabThreshhold;
+    double middleX;
+    double middleY;
+    double L1Scaled;
+    double L2Scaled;
 public:
-    Application();
+    explicit Application(ArgumentParser argumentParser);
     void initApp(Simulation simulation);
     void drawPendulums(sf::RenderWindow &window, Simulation &simulation, unsigned int debug);
 

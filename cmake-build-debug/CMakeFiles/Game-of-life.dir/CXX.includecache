@@ -774,11 +774,17 @@ SFML/System/Vector2.hpp
 SFML/Graphics/RenderWindow.hpp
 -
 
+/home/wojkly/Documents/STUDIA/cpp/Game-of-life/Simulation.cpp
+Simulation.h
+/home/wojkly/Documents/STUDIA/cpp/Game-of-life/Simulation.h
+
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/Simulation.h
 config.h
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/config.h
 DoublePendulum.h
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/DoublePendulum.h
+ArgumentParser.h
+/home/wojkly/Documents/STUDIA/cpp/Game-of-life/ArgumentParser.h
 vector
 -
 

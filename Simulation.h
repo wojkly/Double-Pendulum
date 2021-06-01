@@ -7,6 +7,7 @@
 
 #include "config.h"
 #include "DoublePendulum.h"
+#include "ArgumentParser.h"
 //#include "SFML/include/SFML/Graphics.hpp"
 //#include "SFML/include/SFML/Window.hpp"
 #include <vector>
@@ -16,9 +17,11 @@ class Simulation {
     DoublePendulum *pendulums;
     double delta;
 public:
-    Simulation(int n, double posDiff, double d);
+    explicit Simulation(ArgumentParser argumentParser);
     ~Simulation();
     void step();
+
+    //todo remove this vectors
     std::vector<unsigned int> getColors();
     std::vector<double> getPositions();
     double getTheta1(unsigned int id);

@@ -245,6 +245,7 @@ CMakeFiles/Game-of-life.dir/Simulation.cpp.o
  ../SFML/include/SFML/Window/Window.hpp
  ../SFML/include/SFML/Window/WindowHandle.hpp
  ../SFML/include/SFML/Window/WindowStyle.hpp
+ /home/wojkly/Documents/STUDIA/cpp/Game-of-life/ArgumentParser.h
  /home/wojkly/Documents/STUDIA/cpp/Game-of-life/DoublePendulum.h
  /home/wojkly/Documents/STUDIA/cpp/Game-of-life/PendulumEquation.h
  /home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Graphics.hpp

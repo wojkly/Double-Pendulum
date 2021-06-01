@@ -12,10 +12,19 @@
 #include <vector>
 using namespace std;
 using namespace sf;
+//todo eliminate vectors
+Application::Application(ArgumentParser argumentParser) {
+    simDims = argumentParser.getSimDims();
+    mouseYoffset = argumentParser.getMouseYoffset();
+    mouseGrabThreshhold = argumentParser.getMouseGrabThreshhold();
 
-Application::Application() {
-    L1Scaled = (float ) LENGTH1 / (LENGTH1 + LENGTH2) * middleX - SIM_DIMS / 50;
-    L2Scaled = (float ) LENGTH2 / (LENGTH1 + LENGTH2) * middleX - SIM_DIMS / 50;
+    middleX = simDims / 2;
+    middleY = simDims / 2;
+
+    double l1 = argumentParser.getLength1();
+    double l2 = argumentParser.getLength2();
+    L1Scaled = (float ) l1 / (l1 + l2) * middleX - simDims / 50;
+    L2Scaled = (float ) l2 / (l1 + l2) * middleX - simDims / 50;
 }
 
 void Application::handleMouse(unsigned int mouseX, unsigned int mouseY) {
@@ -28,7 +37,7 @@ int Application::pendulumGrabbed(RenderWindow &window, Simulation &simulation, u
     Vector2i mousePos = Mouse::getPosition();
     Vector2i windowPos = window.getPosition();
     mouseX = mousePos.x - windowPos.x;
-    mouseY = mousePos.y - windowPos.y - MOUSE_Y_OFFSET;
+    mouseY = mousePos.y - windowPos.y - mouseYoffset;
 
     //todo use single getters instead of all-at-once
     vector<double> thetas = simulation.getPositions();
@@ -55,7 +64,7 @@ int Application::pendulumGrabbed(RenderWindow &window, Simulation &simulation, u
         }
     }
 
-    if (minDistance < MOUSE_PENDULUM_MAX_DIST)
+    if (minDistance < mouseGrabThreshhold)
         return grabbedID;
     return -1;
 }
@@ -91,7 +100,7 @@ void Application::pendulumMove(RenderWindow &window, Simulation &simulation, uns
     Vector2i mousePos = Mouse::getPosition();
     Vector2i windowPos = window.getPosition();
     mouseX = mousePos.x - windowPos.x;
-    mouseY = mousePos.y - windowPos.y - MOUSE_Y_OFFSET;
+    mouseY = mousePos.y - windowPos.y - mouseYoffset;
     if (grabbed_id < simulation.size()) {
         theta = getMouseTheta(mouseX, mouseY, -1, -1);
         simulation.setTheta1(grabbed_id, theta);
@@ -110,7 +119,7 @@ void Application::pendulumMove(RenderWindow &window, Simulation &simulation, uns
 
 //todo add args
 void Application::initApp(Simulation simulation) {
-    RenderWindow simWindow( VideoMode(SIM_DIMS,SIM_DIMS),"Double Pendulum Simulation");
+    RenderWindow simWindow( VideoMode(simDims,simDims),"Double Pendulum Simulation");
     simWindow.setVerticalSyncEnabled(true);
     //todo remove debug variable
     unsigned int debug=0;

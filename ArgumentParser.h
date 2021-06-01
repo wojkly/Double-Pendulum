@@ -15,6 +15,9 @@ class ArgumentParser {
     unsigned int simDims;
     unsigned int mouseYoffset;
     unsigned int mouseGrabThreshhold;
+    unsigned int pendulumCount;
+    double pendulumInitPositionDifference;
+    double timeInterval;
     double gravity;
     double mass1;
     double mass2;
@@ -26,16 +29,21 @@ class ArgumentParser {
 public:
     void init(const string& filename);
 
-    unsigned int getSimDims() const;
-    unsigned int getMouseYoffset() const;
-    unsigned int getMouseGrabThreshhold()const;
-    double getGravity()const;
-    double getMass1()const;
-    double getMass2()const;
-    double getThetaInit1()const;
-    double getThetaInit2()const;
-    double getLength1()const;
-    double getLength2()const;
+    unsigned int getSimDims() const{return simDims;};
+    unsigned int getMouseYoffset() const{return mouseYoffset;};
+    unsigned int getMouseGrabThreshhold()const{return mouseGrabThreshhold;};
+
+    unsigned int getPendulumCount()const{return pendulumCount;};
+    double getPendulumInitPositionDifference()const{return pendulumInitPositionDifference;};
+    double getTimeInterval()const{return timeInterval;};
+
+    double getGravity()const{return gravity;};
+    double getMass1()const{return mass1;};
+    double getMass2()const{return mass2;};
+    double getThetaInit1()const{return thetaInit1;};
+    double getThetaInit2()const{return thetaInit2;};
+    double getLength1()const{return length1;};
+    double getLength2()const{return length2;};
 
 };
 

@@ -8,9 +8,7 @@
 
 using namespace std;
 
-DoublePendulum::DoublePendulum(unsigned int c, PendulumEquation equation): equation(equation) {
-    color = c;
-}
+DoublePendulum::DoublePendulum(unsigned int c, PendulumEquation equation): equation(equation), color(c) {}
 
 void DoublePendulum::makeStep(double delta) {
     equation.makeStep(delta);

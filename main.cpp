@@ -2,13 +2,17 @@
 #include "ArgumentParser.h"
 
 int main(int argc, char *argv[]) {
-    //todo get parameters form the console
+    //get parameters
     ArgumentParser argumentParser{};
     argumentParser.init(argv[1]);
 
-    Simulation simulation(30,0.02,0.004);
+    //init simulation object
+    Simulation simulation(argumentParser);
 
-    Application application;
+    //init visualizer
+    Application application(argumentParser);
+
+    //begin simulation
     application.initApp(simulation);
     exit(EXIT_SUCCESS);
 }
