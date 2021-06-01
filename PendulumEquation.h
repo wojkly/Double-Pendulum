@@ -5,6 +5,9 @@
 #ifndef DOUBLE_PENDULUM_SIMULATION_PENDULUMEQUATION_H
 #define DOUBLE_PENDULUM_SIMULATION_PENDULUMEQUATION_H
 
+#include "config.h"
+#include <cmath>
+#include <iostream>
 
 class PendulumEquation {
     double theta1{};

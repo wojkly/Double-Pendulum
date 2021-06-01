@@ -16,7 +16,12 @@
 #include "DoublePendulum.h"
 #include "Simulation.h"
 #include "ArgumentParser.h"
+#include <iostream>
+#include <unistd.h>
+#include <cmath>
 #include <vector>
+using namespace std;
+using namespace sf;
 
 class Application {
     unsigned int simDims;
@@ -29,13 +34,13 @@ class Application {
 public:
     explicit Application(ArgumentParser argumentParser);
     void initApp(Simulation simulation);
-    void drawPendulums(sf::RenderWindow &window, Simulation &simulation, unsigned int debug);
+    void drawPendulums(RenderWindow &window, Simulation &simulation, unsigned int debug);
 
     void handleMouse(unsigned int mouseX, unsigned int mouseY);
 
-    int pendulumGrabbed(sf::RenderWindow &window, Simulation &simulation, unsigned int debug);
+    int pendulumGrabbed(RenderWindow &window, Simulation &simulation, unsigned int debug);
     double getMouseTheta(double x, double y, double xRelativeTo, double yRelativeTo);
-    void pendulumMove(sf::RenderWindow &window, Simulation &simulation, unsigned int  grabbed_id, unsigned int debug);
+    void pendulumMove(RenderWindow &window, Simulation &simulation, unsigned int  grabbed_id, unsigned int debug);
 
 };
 

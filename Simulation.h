@@ -8,8 +8,6 @@
 #include "config.h"
 #include "DoublePendulum.h"
 #include "ArgumentParser.h"
-//#include "SFML/include/SFML/Graphics.hpp"
-//#include "SFML/include/SFML/Window.hpp"
 #include <vector>
 
 class Simulation {
@@ -21,7 +19,7 @@ public:
     ~Simulation();
     void step();
 
-    //todo remove this vectors
+    //todo remove these vectors
     std::vector<unsigned int> getColors();
     std::vector<double> getPositions();
     double getTheta1(unsigned int id);

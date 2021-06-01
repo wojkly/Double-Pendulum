@@ -3,9 +3,6 @@
 //
 
 #include "PendulumEquation.h"
-#include "config.h"
-#include <cmath>
-#include <iostream>
 
 PendulumEquation::PendulumEquation(double th1, double th2) {
     theta1 = th1;

@@ -1,12 +1,8 @@
 //
 // Created by wojkly on 5/29/21.
 //
-#include <iostream>
 
 #include "DoublePendulum.h"
-#include "PendulumEquation.h"
-
-using namespace std;
 
 DoublePendulum::DoublePendulum(unsigned int c, PendulumEquation equation): equation(equation), color(c) {}
 

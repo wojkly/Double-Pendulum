@@ -1,18 +1,9 @@
 //
 // Created by wojkly on 5/29/21.
 //
-#include <iostream>
-#include <unistd.h>
-#include <cmath>
-#include "SFML/include/SFML/Graphics.hpp"
-#include "SFML/include/SFML/Window.hpp"
-#include "SFML/include/SFML/Window/Mouse.hpp"
 #include "Application.h"
-#include "Simulation.h"
-#include <vector>
-using namespace std;
-using namespace sf;
-//todo eliminate vectors
+
+//todo df eliminate vectors
 Application::Application(ArgumentParser argumentParser) {
     simDims = argumentParser.getSimDims();
     mouseYoffset = argumentParser.getMouseYoffset();

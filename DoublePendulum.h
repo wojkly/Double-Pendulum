@@ -1,13 +1,13 @@
 //
 // Created by wojkly on 5/29/21.
 //
-
 #ifndef DOUBLE_PENDULUM_SIMULATION_DOUBLEPENDULUM_H
 #define DOUBLE_PENDULUM_SIMULATION_DOUBLEPENDULUM_H
-#include <iosfwd>
-#include "SFML/include/SFML/Graphics.hpp"
-#include "SFML/include/SFML/Window.hpp"
+
+#include <iostream>
 #include "PendulumEquation.h"
+
+using namespace std;
 
 class DoublePendulum {
     PendulumEquation equation;
@@ -23,6 +23,6 @@ public:
     unsigned int getColor() const;
 };
 
-std::ostream & operator<<(std::ostream & os, const DoublePendulum &pendulum);
+ostream & operator<<(ostream & os, const DoublePendulum &pendulum);
 
 #endif //DOUBLE_PENDULUM_SIMULATION_DOUBLEPENDULUM_H

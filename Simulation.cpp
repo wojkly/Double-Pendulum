@@ -3,9 +3,6 @@
 //
 
 #include "Simulation.h"
-//#include "SFML/include/SFML/Graphics.hpp"
-//#include "SFML/include/SFML/Window.hpp"
-//using namespace sf;
 
 Simulation::Simulation(ArgumentParser argumentParser) {
     size_ = argumentParser.getPendulumCount();
