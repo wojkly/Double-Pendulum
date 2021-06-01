@@ -76,6 +76,7 @@ CMakeFiles/Game-of-life.dir/Application.cpp.o: ../SFML/include/SFML/Window/Windo
 CMakeFiles/Game-of-life.dir/Application.cpp.o: ../SFML/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/Game-of-life.dir/Application.cpp.o: ../Application.cpp
 CMakeFiles/Game-of-life.dir/Application.cpp.o: ../Application.h
+CMakeFiles/Game-of-life.dir/Application.cpp.o: ../ArgumentParser.h
 CMakeFiles/Game-of-life.dir/Application.cpp.o: ../DoublePendulum.h
 CMakeFiles/Game-of-life.dir/Application.cpp.o: ../PendulumEquation.h
 CMakeFiles/Game-of-life.dir/Application.cpp.o: ../SFML/include/SFML/Graphics.hpp
@@ -83,6 +84,9 @@ CMakeFiles/Game-of-life.dir/Application.cpp.o: ../SFML/include/SFML/Window.hpp
 CMakeFiles/Game-of-life.dir/Application.cpp.o: ../SFML/include/SFML/Window/Mouse.hpp
 CMakeFiles/Game-of-life.dir/Application.cpp.o: ../Simulation.h
 CMakeFiles/Game-of-life.dir/Application.cpp.o: ../config.h
+
+CMakeFiles/Game-of-life.dir/ArgumentParser.cpp.o: ../ArgumentParser.cpp
+CMakeFiles/Game-of-life.dir/ArgumentParser.cpp.o: ../ArgumentParser.h
 
 CMakeFiles/Game-of-life.dir/DoublePendulum.cpp.o: ../SFML/include/SFML/Config.hpp
 CMakeFiles/Game-of-life.dir/DoublePendulum.cpp.o: ../SFML/include/SFML/Graphics/BlendMode.hpp
@@ -322,6 +326,7 @@ CMakeFiles/Game-of-life.dir/main.cpp.o: ../SFML/include/SFML/Window/Window.hpp
 CMakeFiles/Game-of-life.dir/main.cpp.o: ../SFML/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/Game-of-life.dir/main.cpp.o: ../SFML/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/Game-of-life.dir/main.cpp.o: ../Application.h
+CMakeFiles/Game-of-life.dir/main.cpp.o: ../ArgumentParser.h
 CMakeFiles/Game-of-life.dir/main.cpp.o: ../DoublePendulum.h
 CMakeFiles/Game-of-life.dir/main.cpp.o: ../PendulumEquation.h
 CMakeFiles/Game-of-life.dir/main.cpp.o: ../SFML/include/SFML/Graphics.hpp

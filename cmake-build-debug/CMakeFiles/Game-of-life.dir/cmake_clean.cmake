@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "../Game-of-life"
   "../Game-of-life.pdb"
   "CMakeFiles/Game-of-life.dir/Application.cpp.o"
+  "CMakeFiles/Game-of-life.dir/ArgumentParser.cpp.o"
   "CMakeFiles/Game-of-life.dir/DoublePendulum.cpp.o"
   "CMakeFiles/Game-of-life.dir/PendulumEquation.cpp.o"
   "CMakeFiles/Game-of-life.dir/Simulation.cpp.o"

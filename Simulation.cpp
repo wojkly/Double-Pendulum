@@ -3,10 +3,9 @@
 //
 
 #include "Simulation.h"
-#include "SFML/include/SFML/Graphics.hpp"
-#include "SFML/include/SFML/Window.hpp"
-#define COLOR_SCALAR 4
-using namespace sf;
+//#include "SFML/include/SFML/Graphics.hpp"
+//#include "SFML/include/SFML/Window.hpp"
+//using namespace sf;
 
 Simulation::Simulation(int n, double posDiff, double d) {
     size_ = n;

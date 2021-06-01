@@ -653,7 +653,17 @@ DoublePendulum.h
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/DoublePendulum.h
 Simulation.h
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/Simulation.h
+ArgumentParser.h
+/home/wojkly/Documents/STUDIA/cpp/Game-of-life/ArgumentParser.h
 vector
+-
+
+/home/wojkly/Documents/STUDIA/cpp/Game-of-life/ArgumentParser.h
+iostream
+-
+fstream
+-
+string
 -
 
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/DoublePendulum.h
@@ -665,16 +675,6 @@ SFML/include/SFML/Window.hpp
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Window.hpp
 PendulumEquation.h
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/PendulumEquation.h
-
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/PendulumEquation.cpp
-PendulumEquation.h
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/PendulumEquation.h
-config.h
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/config.h
-cmath
--
-iostream
--
 
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/PendulumEquation.h
 
@@ -774,23 +774,11 @@ SFML/System/Vector2.hpp
 SFML/Graphics/RenderWindow.hpp
 -
 
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/Simulation.cpp
-Simulation.h
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/Simulation.h
-SFML/include/SFML/Graphics.hpp
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Graphics.hpp
-SFML/include/SFML/Window.hpp
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Window.hpp
-
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/Simulation.h
 config.h
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/config.h
 DoublePendulum.h
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/DoublePendulum.h
-SFML/include/SFML/Graphics.hpp
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Graphics.hpp
-SFML/include/SFML/Window.hpp
-/home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Window.hpp
 vector
 -
 
@@ -799,4 +787,6 @@ vector
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/main.cpp
 Application.h
 /home/wojkly/Documents/STUDIA/cpp/Game-of-life/Application.h
+ArgumentParser.h
+/home/wojkly/Documents/STUDIA/cpp/Game-of-life/ArgumentParser.h
 

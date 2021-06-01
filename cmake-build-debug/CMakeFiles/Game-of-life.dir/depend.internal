@@ -77,6 +77,7 @@ CMakeFiles/Game-of-life.dir/Application.cpp.o
  ../SFML/include/SFML/Window/WindowStyle.hpp
  /home/wojkly/Documents/STUDIA/cpp/Game-of-life/Application.cpp
  /home/wojkly/Documents/STUDIA/cpp/Game-of-life/Application.h
+ /home/wojkly/Documents/STUDIA/cpp/Game-of-life/ArgumentParser.h
  /home/wojkly/Documents/STUDIA/cpp/Game-of-life/DoublePendulum.h
  /home/wojkly/Documents/STUDIA/cpp/Game-of-life/PendulumEquation.h
  /home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Graphics.hpp
@@ -84,6 +85,9 @@ CMakeFiles/Game-of-life.dir/Application.cpp.o
  /home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Window/Mouse.hpp
  /home/wojkly/Documents/STUDIA/cpp/Game-of-life/Simulation.h
  /home/wojkly/Documents/STUDIA/cpp/Game-of-life/config.h
+CMakeFiles/Game-of-life.dir/ArgumentParser.cpp.o
+ /home/wojkly/Documents/STUDIA/cpp/Game-of-life/ArgumentParser.cpp
+ /home/wojkly/Documents/STUDIA/cpp/Game-of-life/ArgumentParser.h
 CMakeFiles/Game-of-life.dir/DoublePendulum.cpp.o
  ../SFML/include/SFML/Config.hpp
  ../SFML/include/SFML/Graphics/BlendMode.hpp
@@ -323,6 +327,7 @@ CMakeFiles/Game-of-life.dir/main.cpp.o
  ../SFML/include/SFML/Window/WindowHandle.hpp
  ../SFML/include/SFML/Window/WindowStyle.hpp
  /home/wojkly/Documents/STUDIA/cpp/Game-of-life/Application.h
+ /home/wojkly/Documents/STUDIA/cpp/Game-of-life/ArgumentParser.h
  /home/wojkly/Documents/STUDIA/cpp/Game-of-life/DoublePendulum.h
  /home/wojkly/Documents/STUDIA/cpp/Game-of-life/PendulumEquation.h
  /home/wojkly/Documents/STUDIA/cpp/Game-of-life/SFML/include/SFML/Graphics.hpp

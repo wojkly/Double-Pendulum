@@ -15,6 +15,7 @@
 #include "config.h"
 #include "DoublePendulum.h"
 #include "Simulation.h"
+#include "ArgumentParser.h"
 #include <vector>
 
 class Application {
@@ -24,7 +25,7 @@ class Application {
     float L2Scaled;
 public:
     Application();
-    void initApp();
+    void initApp(Simulation simulation);
     void drawPendulums(sf::RenderWindow &window, Simulation &simulation, unsigned int debug);
 
     void handleMouse(unsigned int mouseX, unsigned int mouseY);
@@ -33,9 +34,6 @@ public:
     double getMouseTheta(double x, double y, double xRelativeTo, double yRelativeTo);
     void pendulumMove(sf::RenderWindow &window, Simulation &simulation, unsigned int  grabbed_id, unsigned int debug);
 
-//    int pendulumTwoGrabbed(sf::RenderWindow &window, Simulation &simulation, unsigned int debug);
-//    double getMouseThetaTwo(double x, double y, double xMiddle, double yMiddle);
-//    void pendulumTwoMove(sf::RenderWindow &window, Simulation &simulation, unsigned int  grabbed_id, unsigned int debug);
 };
 
 

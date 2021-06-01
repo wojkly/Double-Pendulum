@@ -170,6 +170,33 @@ Application.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game-of-life.dir/build.make CMakeFiles/Game-of-life.dir/Application.cpp.s
 .PHONY : Application.cpp.s
 
+ArgumentParser.o: ArgumentParser.cpp.o
+
+.PHONY : ArgumentParser.o
+
+# target to build an object file
+ArgumentParser.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game-of-life.dir/build.make CMakeFiles/Game-of-life.dir/ArgumentParser.cpp.o
+.PHONY : ArgumentParser.cpp.o
+
+ArgumentParser.i: ArgumentParser.cpp.i
+
+.PHONY : ArgumentParser.i
+
+# target to preprocess a source file
+ArgumentParser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game-of-life.dir/build.make CMakeFiles/Game-of-life.dir/ArgumentParser.cpp.i
+.PHONY : ArgumentParser.cpp.i
+
+ArgumentParser.s: ArgumentParser.cpp.s
+
+.PHONY : ArgumentParser.s
+
+# target to generate assembly for a file
+ArgumentParser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game-of-life.dir/build.make CMakeFiles/Game-of-life.dir/ArgumentParser.cpp.s
+.PHONY : ArgumentParser.cpp.s
+
 DoublePendulum.o: DoublePendulum.cpp.o
 
 .PHONY : DoublePendulum.o
@@ -290,6 +317,9 @@ help:
 	@echo "... Application.o"
 	@echo "... Application.i"
 	@echo "... Application.s"
+	@echo "... ArgumentParser.o"
+	@echo "... ArgumentParser.i"
+	@echo "... ArgumentParser.s"
 	@echo "... DoublePendulum.o"
 	@echo "... DoublePendulum.i"
 	@echo "... DoublePendulum.s"

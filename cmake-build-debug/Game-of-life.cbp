@@ -90,6 +90,12 @@
 		<Unit filename="/home/wojkly/Documents/STUDIA/cpp/Game-of-life/Application.h">
 			<Option target="Game-of-life"/>
 		</Unit>
+		<Unit filename="/home/wojkly/Documents/STUDIA/cpp/Game-of-life/ArgumentParser.cpp">
+			<Option target="Game-of-life"/>
+		</Unit>
+		<Unit filename="/home/wojkly/Documents/STUDIA/cpp/Game-of-life/ArgumentParser.h">
+			<Option target="Game-of-life"/>
+		</Unit>
 		<Unit filename="/home/wojkly/Documents/STUDIA/cpp/Game-of-life/DoublePendulum.cpp">
 			<Option target="Game-of-life"/>
 		</Unit>

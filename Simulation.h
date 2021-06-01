@@ -7,8 +7,8 @@
 
 #include "config.h"
 #include "DoublePendulum.h"
-#include "SFML/include/SFML/Graphics.hpp"
-#include "SFML/include/SFML/Window.hpp"
+//#include "SFML/include/SFML/Graphics.hpp"
+//#include "SFML/include/SFML/Window.hpp"
 #include <vector>
 
 class Simulation {

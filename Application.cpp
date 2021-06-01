@@ -109,8 +109,7 @@ void Application::pendulumMove(RenderWindow &window, Simulation &simulation, uns
 }
 
 //todo add args
-void Application::initApp() {
-    Simulation simulation(1,0.001,0.005);
+void Application::initApp(Simulation simulation) {
     RenderWindow simWindow( VideoMode(SIM_DIMS,SIM_DIMS),"Double Pendulum Simulation");
     simWindow.setVerticalSyncEnabled(true);
     //todo remove debug variable
