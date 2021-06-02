@@ -36,6 +36,8 @@ public:
 
     void handleMouse(RenderWindow &window, Simulation &simulation);
 
+    Vector2f getPendulumCoords(double theta, Vector2f relativeTo, bool firstArm) const;
+
 };
 
 

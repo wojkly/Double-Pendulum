@@ -3,7 +3,6 @@
 //
 #include "Application.h"
 
-//todo df eliminate vectors
 Application::Application(ArgumentParser argumentParser) {
     simDims = argumentParser.getSimDims();
     mouseYoffset = argumentParser.getMouseYoffset();
@@ -14,16 +13,13 @@ Application::Application(ArgumentParser argumentParser) {
 
     double l1 = argumentParser.getLength1();
     double l2 = argumentParser.getLength2();
-    L1Scaled = (float ) l1 / (l1 + l2) * middleX - simDims / 50;
-    L2Scaled = (float ) l2 / (l1 + l2) * middleX - simDims / 50;
+    L1Scaled = (float ) l1 / (l1 + l2) * middleX - simDims / 100;
+    L2Scaled = (float ) l2 / (l1 + l2) * middleX - simDims / 100;
 }
 
 
 //todo vector 2f
-//function get x1(th1)
-//function get y1(th1)
-//function get x2(x1, x1, th2)
-//function get y2(x1, y1, th2)
+
 
 int Application::pendulumGrabbed(RenderWindow &window, Simulation &simulation) {
     float mouseX, mouseY;
@@ -32,23 +28,25 @@ int Application::pendulumGrabbed(RenderWindow &window, Simulation &simulation) {
     mouseX = mousePos.x - windowPos.x;
     mouseY = mousePos.y - windowPos.y - mouseYoffset;
 
-    double theta1, theta2, x1, y1, x2, y2, minDistance = 1000.0, distance;
+    double theta1, theta2, minDistance = 1000.0, distance;
+
+    const Vector2f position0(middleX, middleY);
+    Vector2f position1, position2;
+
     int grabbedID = -1;
     VertexArray lines(LineStrip, 3);
     for (int i = 0; i < simulation.size(); i++) {
         theta1 = simulation.getTheta1(i);
         theta2 = simulation.getTheta2(i);
 
-        x1 = middleX - L1Scaled * sin(theta1);
-        y1 = middleY + L1Scaled * cos(theta1);
-        distance = sqrt((mouseX - x1)*(mouseX - x1) + (mouseY - y1)*(mouseY - y1));
+        position1 = getPendulumCoords(theta1, position0, true);
+        distance = sqrt((mouseX - position1.x)*(mouseX - position1.x) + (mouseY - position1.y)*(mouseY - position1.y));
         if (distance < minDistance){
             minDistance = distance;
             grabbedID = i;
         }
-        x2 = x1 - L2Scaled*sin(theta2);
-        y2 = y1 + L2Scaled*cos(theta2);
-        distance = sqrt((mouseX - x2)*(mouseX - x2) + (mouseY - y2)*(mouseY - y2));
+        position2 = getPendulumCoords(theta2, position1, false);
+        distance = sqrt((mouseX - position2.x)*(mouseX - position2.x) + (mouseY - position2.y)*(mouseY - position2.y));
         if (distance < minDistance){
             minDistance = distance;
             grabbedID = i + (int)simulation.size();
@@ -84,10 +82,9 @@ double Application::getMouseTheta(double x, double y, double xRelativeTo, double
     return theta;
 }
 
-
 void Application::pendulumMove(RenderWindow &window, Simulation &simulation, unsigned int grabbed_id) const {
     float mouseX, mouseY;
-    double theta, x1, y1;
+    double theta;
     Vector2i mousePos = Mouse::getPosition();
     Vector2i windowPos = window.getPosition();
     mouseX = mousePos.x - windowPos.x;
@@ -98,21 +95,19 @@ void Application::pendulumMove(RenderWindow &window, Simulation &simulation, uns
     }
     else{
         grabbed_id -= simulation.size();
-        //todo use single getters instead of all-at-once
-        x1 = middleX - L1Scaled*sin(simulation.getTheta1(grabbed_id));
-        y1 = middleY + L1Scaled*cos(simulation.getTheta1(grabbed_id));
-        theta = getMouseTheta(mouseX,mouseY,x1,y1);
+        const Vector2f position0(middleX, middleY);
+        Vector2f position1;
+        position1 = getPendulumCoords(simulation.getTheta1(grabbed_id), position0, true);
+
+        theta = getMouseTheta(mouseX,mouseY,position1.x,position1.y);
         simulation.setTheta2(grabbed_id,theta);
     }
-//    cout<<thetaOne<<endl;
 }
 
+//handles clicking -> holding -> releasing the mouse button
 void Application::handleMouse(RenderWindow &window, Simulation &simulation) {
     int grabbed_id = pendulumGrabbed(window, simulation);
-//    cout<<grabbed_id<<endl;
     if (grabbed_id != -1) {
-        //if grabbed
-        bool mouse_released = false;
         while (true) {
             pendulumMove(window, simulation, (unsigned int) grabbed_id);
             window.clear();
@@ -121,19 +116,15 @@ void Application::handleMouse(RenderWindow &window, Simulation &simulation) {
             sf::Event event{};
             while (window.pollEvent(event)) {
                 if (event.type == Event::MouseButtonReleased) {
-                    mouse_released = true;
-                    break;
+                    return;
                 }
                 if (event.type == Event::Closed)
                     window.close();
             }
-            if (mouse_released)
-                break;
         }
     }
 }
 
-//todo add args
 void Application::initApp(Simulation simulation) {
     RenderWindow simWindow( VideoMode(simDims,simDims),"Double Pendulum Simulation");
     simWindow.setVerticalSyncEnabled(true);
@@ -155,27 +146,38 @@ void Application::initApp(Simulation simulation) {
     }
 }
 
+Vector2f Application::getPendulumCoords(double theta, Vector2f relativeTo, bool firstArm) const {
+    Vector2f result;
+    double l;
+    if (firstArm){
+        l = L1Scaled;
+    } else {
+        l = L2Scaled;
+    }
+    result.x = relativeTo.x - l * sin(theta);
+    result.y  = relativeTo.y + l * cos(theta);
+    return result;
+}
 
 void Application::drawPendulums(sf::RenderWindow &window, Simulation &simulation) const {
-    double theta1, theta2, x1, y1, x2, y2;
+    double theta1, theta2;
+    const Vector2f position0(middleX, middleY);
+    Vector2f position1, position2;
     Color color;
     VertexArray lines(LineStrip, 3);
     for (int i = 0; i < simulation.size();  i++) {
-        //todo copy into some function
         theta1 = simulation.getTheta1(i);
         theta2 = simulation.getTheta2(i);
         color = Color(simulation.getColor(i));
 
-        x1 = middleX - L1Scaled*sin(theta1);
-        y1 = middleY + L1Scaled*cos(theta1);
-        x2 = x1 - L2Scaled*sin(theta2);
-        y2 = y1 + L2Scaled*cos(theta2);
+        position1 = getPendulumCoords(theta1, position0, true);
+        position2 = getPendulumCoords(theta2, position1, false);
 
-        lines[0].position = Vector2f(middleX,middleY);
+        lines[0].position = position0;
         lines[0].color = color;
-        lines[1].position = Vector2f(x1, y1);
+        lines[1].position = position1;
         lines[1].color = color;
-        lines[2].position = Vector2f(x2, y2);
+        lines[2].position = position2;
         lines[2].color = color;
         //todo draw circles in the middle, at the end itd. proportional to mass
         window.draw(lines);

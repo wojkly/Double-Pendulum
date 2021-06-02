@@ -16,9 +16,9 @@ int main(int argc, char *argv[]) {
 
     //init visualizer
     Application application(argumentParser);
-    if (fork())
-        application.initApp(simulation);
-    else
+//    if (fork())
+//        application.initApp(simulation);
+//    else
         application.initApp(simulation);
 
     //begin simulation
