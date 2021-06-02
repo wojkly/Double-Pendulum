@@ -114,9 +114,6 @@
 		<Unit filename="/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/Simulation.h">
 			<Option target="Double-Pendulum-Simulation"/>
 		</Unit>
-		<Unit filename="/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/config.h">
-			<Option target="Double-Pendulum-Simulation"/>
-		</Unit>
 		<Unit filename="/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/main.cpp">
 			<Option target="Double-Pendulum-Simulation"/>
 		</Unit>

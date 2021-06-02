@@ -8,7 +8,13 @@ PendulumEquation::PendulumEquation(double th1, double th2) {
     theta1 = th1;
     theta2 = th2;
 }
-//todo ????? add runge-kutta method?? (least important one)
+
+double PendulumEquation::GRAVITY = 9.82;
+double PendulumEquation::LENGTH1 = 1;
+double PendulumEquation::LENGTH2 = 1;
+double PendulumEquation::MASS1 = 1;
+double PendulumEquation::MASS2 = 1;
+
 double PendulumEquation::w1Prim() const {
     double result = 0;
     result -= GRAVITY*(2*MASS1 + MASS2)*sin(theta1);
@@ -48,6 +54,26 @@ void PendulumEquation::setTheta2(double th2) {
     theta2 = th2;
     w1 = 0;
     w2 = 0;
+}
+
+ void PendulumEquation::setGravity(double g) {
+    GRAVITY = g;
+}
+
+void PendulumEquation::setLength1(double l) {
+    LENGTH1 = l;
+}
+
+void PendulumEquation::setLength2(double l) {
+    LENGTH2 = l;
+}
+
+void PendulumEquation::setMass1(double m) {
+    MASS1 = m;
+}
+
+void PendulumEquation::setMass2(double m) {
+    MASS2 = m;
 }
 
 

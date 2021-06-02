@@ -2,6 +2,11 @@
 #include "ArgumentParser.h"
 
 int main(int argc, char *argv[]) {
+    //check number if args
+    if (argc != 2){
+        perror("wrong argument count");
+        exit(EXIT_FAILURE);
+    }
     //get parameters
     ArgumentParser argumentParser{};
     argumentParser.init(argv[1]);
@@ -11,8 +16,11 @@ int main(int argc, char *argv[]) {
 
     //init visualizer
     Application application(argumentParser);
+    if (fork())
+        application.initApp(simulation);
+    else
+        application.initApp(simulation);
 
     //begin simulation
-    application.initApp(simulation);
     exit(EXIT_SUCCESS);
 }

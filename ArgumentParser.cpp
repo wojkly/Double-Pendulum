@@ -5,7 +5,6 @@
 #include "ArgumentParser.h"
 
 
-
 void ArgumentParser::init(const string& filename) {
 
     fstream configFile;

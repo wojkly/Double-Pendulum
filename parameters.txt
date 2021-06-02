@@ -1,13 +1,13 @@
 simDims
-800
+500
 mouseYoffset
 25
 mouseGrabThreshhold
 50
 pendulumCount
-100
+20
 pendulumInitPositionDifference
-0.02
+0.06
 timeInterval
 0.004
 gravity

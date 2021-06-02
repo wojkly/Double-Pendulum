@@ -631,8 +631,6 @@ SFML/include/SFML/Graphics.hpp
 /home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/SFML/include/SFML/Graphics.hpp
 SFML/include/SFML/Window.hpp
 /home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/SFML/include/SFML/Window.hpp
-config.h
-/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/config.h
 DoublePendulum.h
 /home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/DoublePendulum.h
 Simulation.h
@@ -644,8 +642,6 @@ iostream
 unistd.h
 -
 cmath
--
-vector
 -
 
 /home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/ArgumentParser.h
@@ -663,8 +659,6 @@ PendulumEquation.h
 /home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/PendulumEquation.h
 
 /home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/PendulumEquation.h
-config.h
-/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/config.h
 cmath
 -
 iostream
@@ -758,21 +752,11 @@ SFML/Window/WindowHandle.hpp
 SFML/Window/WindowStyle.hpp
 -
 
-/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/Simulation.cpp
-Simulation.h
 /home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/Simulation.h
-
-/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/Simulation.h
-config.h
-/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/config.h
 DoublePendulum.h
 /home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/DoublePendulum.h
 ArgumentParser.h
 /home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/ArgumentParser.h
-vector
--
-
-/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/config.h
 
 /home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/main.cpp
 Application.h
