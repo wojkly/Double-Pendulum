@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/Application.cpp" "/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/cmake-build-debug/CMakeFiles/Double-Pendulum-Simulation.dir/Application.cpp.o"
   "/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/ArgumentParser.cpp" "/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/cmake-build-debug/CMakeFiles/Double-Pendulum-Simulation.dir/ArgumentParser.cpp.o"
+  "/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/ColorManager.cpp" "/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/cmake-build-debug/CMakeFiles/Double-Pendulum-Simulation.dir/ColorManager.cpp.o"
   "/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/DoublePendulum.cpp" "/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/cmake-build-debug/CMakeFiles/Double-Pendulum-Simulation.dir/DoublePendulum.cpp.o"
   "/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/PendulumEquation.cpp" "/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/cmake-build-debug/CMakeFiles/Double-Pendulum-Simulation.dir/PendulumEquation.cpp.o"
   "/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/Simulation.cpp" "/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/cmake-build-debug/CMakeFiles/Double-Pendulum-Simulation.dir/Simulation.cpp.o"

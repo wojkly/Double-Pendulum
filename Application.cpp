@@ -3,6 +3,7 @@
 //
 #include "Application.h"
 
+//todo add comments edescribing functions, classes
 Application::Application(ArgumentParser argumentParser) {
     simDims = argumentParser.getSimDims();
     mouseYoffset = argumentParser.getMouseYoffset();
@@ -17,8 +18,18 @@ Application::Application(ArgumentParser argumentParser) {
     L2Scaled = (float ) l2 / (l1 + l2) * middleX - simDims / 100;
 }
 
-
-//todo vector 2f
+Vector2f Application::getPendulumCoords(double theta, Vector2f relativeTo, bool firstArm) const {
+    Vector2f result;
+    double l;
+    if (firstArm){
+        l = L1Scaled;
+    } else {
+        l = L2Scaled;
+    }
+    result.x = relativeTo.x - l * sin(theta);
+    result.y  = relativeTo.y + l * cos(theta);
+    return result;
+}
 
 
 int Application::pendulumGrabbed(RenderWindow &window, Simulation &simulation) {
@@ -28,13 +39,12 @@ int Application::pendulumGrabbed(RenderWindow &window, Simulation &simulation) {
     mouseX = mousePos.x - windowPos.x;
     mouseY = mousePos.y - windowPos.y - mouseYoffset;
 
-    double theta1, theta2, minDistance = 1000.0, distance;
+    double theta1, theta2, minDistance = mouseGrabThreshhold, distance;
 
     const Vector2f position0(middleX, middleY);
     Vector2f position1, position2;
 
     int grabbedID = -1;
-    VertexArray lines(LineStrip, 3);
     for (int i = 0; i < simulation.size(); i++) {
         theta1 = simulation.getTheta1(i);
         theta2 = simulation.getTheta2(i);
@@ -146,18 +156,6 @@ void Application::initApp(Simulation simulation) {
     }
 }
 
-Vector2f Application::getPendulumCoords(double theta, Vector2f relativeTo, bool firstArm) const {
-    Vector2f result;
-    double l;
-    if (firstArm){
-        l = L1Scaled;
-    } else {
-        l = L2Scaled;
-    }
-    result.x = relativeTo.x - l * sin(theta);
-    result.y  = relativeTo.y + l * cos(theta);
-    return result;
-}
 
 void Application::drawPendulums(sf::RenderWindow &window, Simulation &simulation) const {
     double theta1, theta2;
@@ -165,6 +163,7 @@ void Application::drawPendulums(sf::RenderWindow &window, Simulation &simulation
     Vector2f position1, position2;
     Color color;
     VertexArray lines(LineStrip, 3);
+//    VertexArray lines(sf::PrimitiveType::Quads, 4);
     for (int i = 0; i < simulation.size();  i++) {
         theta1 = simulation.getTheta1(i);
         theta2 = simulation.getTheta2(i);
@@ -179,7 +178,7 @@ void Application::drawPendulums(sf::RenderWindow &window, Simulation &simulation
         lines[1].color = color;
         lines[2].position = position2;
         lines[2].color = color;
-        //todo draw circles in the middle, at the end itd. proportional to mass
+
         window.draw(lines);
     }
 }

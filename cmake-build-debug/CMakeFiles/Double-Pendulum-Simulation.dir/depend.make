@@ -77,6 +77,7 @@ CMakeFiles/Double-Pendulum-Simulation.dir/Application.cpp.o: ../SFML/include/SFM
 CMakeFiles/Double-Pendulum-Simulation.dir/Application.cpp.o: ../Application.cpp
 CMakeFiles/Double-Pendulum-Simulation.dir/Application.cpp.o: ../Application.h
 CMakeFiles/Double-Pendulum-Simulation.dir/Application.cpp.o: ../ArgumentParser.h
+CMakeFiles/Double-Pendulum-Simulation.dir/Application.cpp.o: ../ColorManager.h
 CMakeFiles/Double-Pendulum-Simulation.dir/Application.cpp.o: ../DoublePendulum.h
 CMakeFiles/Double-Pendulum-Simulation.dir/Application.cpp.o: ../PendulumEquation.h
 CMakeFiles/Double-Pendulum-Simulation.dir/Application.cpp.o: ../SFML/include/SFML/Graphics.hpp
@@ -86,6 +87,9 @@ CMakeFiles/Double-Pendulum-Simulation.dir/Application.cpp.o: ../Simulation.h
 CMakeFiles/Double-Pendulum-Simulation.dir/ArgumentParser.cpp.o: ../ArgumentParser.cpp
 CMakeFiles/Double-Pendulum-Simulation.dir/ArgumentParser.cpp.o: ../ArgumentParser.h
 
+CMakeFiles/Double-Pendulum-Simulation.dir/ColorManager.cpp.o: ../ColorManager.cpp
+CMakeFiles/Double-Pendulum-Simulation.dir/ColorManager.cpp.o: ../ColorManager.h
+
 CMakeFiles/Double-Pendulum-Simulation.dir/DoublePendulum.cpp.o: ../DoublePendulum.cpp
 CMakeFiles/Double-Pendulum-Simulation.dir/DoublePendulum.cpp.o: ../DoublePendulum.h
 CMakeFiles/Double-Pendulum-Simulation.dir/DoublePendulum.cpp.o: ../PendulumEquation.h
@@ -94,6 +98,7 @@ CMakeFiles/Double-Pendulum-Simulation.dir/PendulumEquation.cpp.o: ../PendulumEqu
 CMakeFiles/Double-Pendulum-Simulation.dir/PendulumEquation.cpp.o: ../PendulumEquation.h
 
 CMakeFiles/Double-Pendulum-Simulation.dir/Simulation.cpp.o: ../ArgumentParser.h
+CMakeFiles/Double-Pendulum-Simulation.dir/Simulation.cpp.o: ../ColorManager.h
 CMakeFiles/Double-Pendulum-Simulation.dir/Simulation.cpp.o: ../DoublePendulum.h
 CMakeFiles/Double-Pendulum-Simulation.dir/Simulation.cpp.o: ../PendulumEquation.h
 CMakeFiles/Double-Pendulum-Simulation.dir/Simulation.cpp.o: ../Simulation.cpp
@@ -174,6 +179,7 @@ CMakeFiles/Double-Pendulum-Simulation.dir/main.cpp.o: ../SFML/include/SFML/Windo
 CMakeFiles/Double-Pendulum-Simulation.dir/main.cpp.o: ../SFML/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/Double-Pendulum-Simulation.dir/main.cpp.o: ../Application.h
 CMakeFiles/Double-Pendulum-Simulation.dir/main.cpp.o: ../ArgumentParser.h
+CMakeFiles/Double-Pendulum-Simulation.dir/main.cpp.o: ../ColorManager.h
 CMakeFiles/Double-Pendulum-Simulation.dir/main.cpp.o: ../DoublePendulum.h
 CMakeFiles/Double-Pendulum-Simulation.dir/main.cpp.o: ../PendulumEquation.h
 CMakeFiles/Double-Pendulum-Simulation.dir/main.cpp.o: ../SFML/include/SFML/Graphics.hpp

@@ -7,6 +7,7 @@
 
 #include "DoublePendulum.h"
 #include "ArgumentParser.h"
+#include "ColorManager.h"
 
 class Simulation {
     size_t size_;

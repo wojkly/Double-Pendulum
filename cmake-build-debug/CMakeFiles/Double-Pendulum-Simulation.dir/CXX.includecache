@@ -652,6 +652,14 @@ fstream
 string
 -
 
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/ColorManager.cpp
+ColorManager.h
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/ColorManager.h
+
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/ColorManager.h
+algorithm
+-
+
 /home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/DoublePendulum.h
 iostream
 -
@@ -752,9 +760,21 @@ SFML/Window/WindowHandle.hpp
 SFML/Window/WindowStyle.hpp
 -
 
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/Simulation.cpp
+Simulation.h
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/Simulation.h
+
 /home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/Simulation.h
 DoublePendulum.h
 /home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/DoublePendulum.h
+ArgumentParser.h
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/ArgumentParser.h
+ColorManager.h
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/ColorManager.h
+
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/main.cpp
+Application.h
+/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/Application.h
 ArgumentParser.h
 /home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/ArgumentParser.h
 

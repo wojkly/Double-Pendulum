@@ -96,6 +96,12 @@
 		<Unit filename="/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/ArgumentParser.h">
 			<Option target="Double-Pendulum-Simulation"/>
 		</Unit>
+		<Unit filename="/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/ColorManager.cpp">
+			<Option target="Double-Pendulum-Simulation"/>
+		</Unit>
+		<Unit filename="/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/ColorManager.h">
+			<Option target="Double-Pendulum-Simulation"/>
+		</Unit>
 		<Unit filename="/home/wojkly/Documents/STUDIA/cpp/Double-Pendulum-Simulation/DoublePendulum.cpp">
 			<Option target="Double-Pendulum-Simulation"/>
 		</Unit>

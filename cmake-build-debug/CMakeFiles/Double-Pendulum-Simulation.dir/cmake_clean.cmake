@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "../Double-Pendulum-Simulation.pdb"
   "CMakeFiles/Double-Pendulum-Simulation.dir/Application.cpp.o"
   "CMakeFiles/Double-Pendulum-Simulation.dir/ArgumentParser.cpp.o"
+  "CMakeFiles/Double-Pendulum-Simulation.dir/ColorManager.cpp.o"
   "CMakeFiles/Double-Pendulum-Simulation.dir/DoublePendulum.cpp.o"
   "CMakeFiles/Double-Pendulum-Simulation.dir/PendulumEquation.cpp.o"
   "CMakeFiles/Double-Pendulum-Simulation.dir/Simulation.cpp.o"

@@ -197,6 +197,33 @@ ArgumentParser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Double-Pendulum-Simulation.dir/build.make CMakeFiles/Double-Pendulum-Simulation.dir/ArgumentParser.cpp.s
 .PHONY : ArgumentParser.cpp.s
 
+ColorManager.o: ColorManager.cpp.o
+
+.PHONY : ColorManager.o
+
+# target to build an object file
+ColorManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Double-Pendulum-Simulation.dir/build.make CMakeFiles/Double-Pendulum-Simulation.dir/ColorManager.cpp.o
+.PHONY : ColorManager.cpp.o
+
+ColorManager.i: ColorManager.cpp.i
+
+.PHONY : ColorManager.i
+
+# target to preprocess a source file
+ColorManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Double-Pendulum-Simulation.dir/build.make CMakeFiles/Double-Pendulum-Simulation.dir/ColorManager.cpp.i
+.PHONY : ColorManager.cpp.i
+
+ColorManager.s: ColorManager.cpp.s
+
+.PHONY : ColorManager.s
+
+# target to generate assembly for a file
+ColorManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Double-Pendulum-Simulation.dir/build.make CMakeFiles/Double-Pendulum-Simulation.dir/ColorManager.cpp.s
+.PHONY : ColorManager.cpp.s
+
 DoublePendulum.o: DoublePendulum.cpp.o
 
 .PHONY : DoublePendulum.o
@@ -320,6 +347,9 @@ help:
 	@echo "... ArgumentParser.o"
 	@echo "... ArgumentParser.i"
 	@echo "... ArgumentParser.s"
+	@echo "... ColorManager.o"
+	@echo "... ColorManager.i"
+	@echo "... ColorManager.s"
 	@echo "... DoublePendulum.o"
 	@echo "... DoublePendulum.i"
 	@echo "... DoublePendulum.s"

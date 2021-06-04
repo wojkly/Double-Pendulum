@@ -15,56 +15,15 @@ Simulation::Simulation(ArgumentParser argumentParser) {
     PendulumEquation::setMass1(argumentParser.getMass1());
     PendulumEquation::setMass2(argumentParser.getMass2());
 
+    ColorManager::setInitialValues(size_);
+
     double initTheta1 = argumentParser.getThetaInit1();
     double initTheta2 = argumentParser.getThetaInit2();
     double posDiff = argumentParser.getPendulumInitPositionDifference();
 
-    //todo add color getter class
-    int n_sixth = size_ / 6;
-    int calor_value = 255 * 6 / size_;
     for (int i = 0; i < size_; ++i) {
-        unsigned int red,green,blue,alpha;
-        int k = i % n_sixth;
-        //start from RGB = 0,1,0
-
-        //blue +
-        if (i < n_sixth) {
-            red = 0;
-            green = 255;
-            blue = std::min(calor_value*i, 255);
-        }
-        //green -
-        else if (i < 2*n_sixth) {
-            red = 0;
-            green = std::max(255 - calor_value*k, 0);
-            blue = 255;
-        }
-        //red +
-        else if (i < 3*n_sixth) {
-            red = std::min(calor_value*k, 255);
-            green = 0;
-            blue = 255;
-        }
-        //blue -
-        else if (i < 4*n_sixth) {
-            red = 255;
-            green = 0;
-            blue = std::max(255 - calor_value*k, 0);
-        }
-        //green +
-        else if (i < 5*n_sixth) {
-            red = 255;
-            green = std::min(calor_value*k, 255);
-            blue = 0;
-        }
-        //red -
-        else{
-            red = std::max(255 - calor_value*k, 0);
-            green = 255;
-            blue = 0;
-        }
-        alpha = 255;
-        pendulums[i] = DoublePendulum(alpha + 256*(blue + 256 *(green + 256* red)), PendulumEquation(initTheta1 + posDiff*i,initTheta2 + posDiff*i));
+        pendulums[i] = DoublePendulum(ColorManager::getColor(i),
+                                      PendulumEquation(initTheta1 + posDiff*i,initTheta2 + posDiff*i));
     }
 }
 
