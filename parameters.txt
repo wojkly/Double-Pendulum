@@ -5,9 +5,9 @@ mouseYoffset
 mouseGrabThreshhold
 50
 pendulumCount
-30
+10
 pendulumInitPositionDifference
-0.06
+0.0001
 timeInterval
 0.005
 gravity

@@ -1,5 +1,10 @@
 #include "Application.h"
 #include "ArgumentParser.h"
+#include <ctime>
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
 
 int main(int argc, char *argv[]) {
     //check number if args
@@ -7,6 +12,7 @@ int main(int argc, char *argv[]) {
         perror("wrong argument count");
         exit(EXIT_FAILURE);
     }
+    srand(time(NULL));
     //get parameters
     ArgumentParser argumentParser{};
     argumentParser.init(argv[1]);

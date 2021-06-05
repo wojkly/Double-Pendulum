@@ -6,12 +6,17 @@
 #define DOUBLE_PENDULUM_SIMULATION_COLORMANAGER_H
 
 #include <algorithm>
+#include <cstdlib>
+#include <iostream>
+#include <ctime>
+
+using namespace std;
 
 class ColorManager {
 public:
-    static int n_sixth;
-    static int color_value;
-    static void setInitialValues(int n);
+    static size_t n;
+    static size_t move_by;
+    static void setInitialValues(size_t n);
     static unsigned int getColor(int i);
 };
 
