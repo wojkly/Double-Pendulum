@@ -10,14 +10,13 @@ std::size_t ColorManager::move_by = 0;
 void ColorManager::setInitialValues(size_t n_) {
     n = n_;
     move_by = rand()%256;
-    cout<<move_by<<endl;
 }
 unsigned int ColorManager::getColor(int i) {
 
     unsigned int red,green,blue,alpha;
 
-    int x = ((i + move_by) % n) * 6 * 256 / n;
-    int interval = x / 256;
+    std::size_t x = ((i + move_by) % n) * 6 * 256 / n;
+    size_t interval = x / 256;
     int k = x % 256;
 
 //    //start from RGB = 0,1,0

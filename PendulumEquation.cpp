@@ -34,7 +34,7 @@ void PendulumEquation::makeStep(double delta) {
     theta2 = theta2 + delta * w2;
     w1 = w1 + delta * w1Prim();
     w2 = w2 + delta * w2Prim();
-//    std::cout<<theta1<<" "<<theta2<<std::endl;
+
 }
 
 double PendulumEquation::getTheta1() const {

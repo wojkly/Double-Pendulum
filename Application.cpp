@@ -3,19 +3,18 @@
 //
 #include "Application.h"
 
-//todo add comments edescribing functions, classes
 Application::Application(ArgumentParser argumentParser) {
     simDims = argumentParser.getSimDims();
     mouseYoffset = argumentParser.getMouseYoffset();
     mouseGrabThreshhold = argumentParser.getMouseGrabThreshhold();
 
-    middleX = simDims / 2;
-    middleY = simDims / 2;
+    middleX = (float)simDims / 2;
+    middleY = (float)simDims / 2;
 
     double l1 = argumentParser.getLength1();
     double l2 = argumentParser.getLength2();
-    L1Scaled = (float ) l1 / (l1 + l2) * middleX - simDims / 100;
-    L2Scaled = (float ) l2 / (l1 + l2) * middleX - simDims / 100;
+    L1Scaled = (float ) l1 / (l1 + l2) * middleX - (float)simDims / 100;
+    L2Scaled = (float ) l2 / (l1 + l2) * middleX - (float)simDims / 100;
 }
 
 Vector2f Application::getPendulumCoords(double theta, Vector2f relativeTo, bool firstArm) const {
@@ -32,12 +31,12 @@ Vector2f Application::getPendulumCoords(double theta, Vector2f relativeTo, bool 
 }
 
 
-int Application::pendulumGrabbed(RenderWindow &window, Simulation &simulation) {
+int Application::pendulumGrabbed(RenderWindow &window, Simulation &simulation) const {
     float mouseX, mouseY;
     Vector2i mousePos = Mouse::getPosition();
     Vector2i windowPos = window.getPosition();
-    mouseX = mousePos.x - windowPos.x;
-    mouseY = mousePos.y - windowPos.y - mouseYoffset;
+    mouseX = (float)mousePos.x - windowPos.x;
+    mouseY = (float)mousePos.y - windowPos.y - (float)mouseYoffset;
 
     double theta1, theta2, minDistance = mouseGrabThreshhold, distance;
 
@@ -97,8 +96,8 @@ void Application::pendulumMove(RenderWindow &window, Simulation &simulation, uns
     double theta;
     Vector2i mousePos = Mouse::getPosition();
     Vector2i windowPos = window.getPosition();
-    mouseX = mousePos.x - windowPos.x;
-    mouseY = mousePos.y - windowPos.y - mouseYoffset;
+    mouseX = (float)mousePos.x - windowPos.x;
+    mouseY = (float)mousePos.y - windowPos.y - (float)mouseYoffset;
     if (grabbed_id < simulation.size()) {
         theta = getMouseTheta(mouseX, mouseY, -1, -1);
         simulation.setTheta1(grabbed_id, theta);
@@ -115,7 +114,7 @@ void Application::pendulumMove(RenderWindow &window, Simulation &simulation, uns
 }
 
 //handles clicking -> holding -> releasing the mouse button
-void Application::handleMouse(RenderWindow &window, Simulation &simulation) {
+void Application::handleMouse(RenderWindow &window, Simulation &simulation) const {
     int grabbed_id = pendulumGrabbed(window, simulation);
     if (grabbed_id != -1) {
         while (true) {
@@ -135,7 +134,7 @@ void Application::handleMouse(RenderWindow &window, Simulation &simulation) {
     }
 }
 
-void Application::initApp(Simulation simulation) {
+void Application::initApp(Simulation simulation) const {
     RenderWindow simWindow( VideoMode(simDims,simDims),"Double Pendulum Simulation");
     simWindow.setVerticalSyncEnabled(true);
     while (simWindow.isOpen())
@@ -163,7 +162,6 @@ void Application::drawPendulums(sf::RenderWindow &window, Simulation &simulation
     Vector2f position1, position2;
     Color color;
     VertexArray lines(LineStrip, 3);
-//    VertexArray lines(sf::PrimitiveType::Quads, 4);
     for (int i = 0; i < simulation.size();  i++) {
         theta1 = simulation.getTheta1(i);
         theta2 = simulation.getTheta2(i);

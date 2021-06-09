@@ -7,7 +7,7 @@ mouseGrabThreshhold
 pendulumCount
 10
 pendulumInitPositionDifference
-0.0001
+0.001
 timeInterval
 0.005
 gravity
@@ -15,7 +15,7 @@ gravity
 mass1
 1.0
 mass2
-1.0
+3.0
 thetaInit1
 3.2
 thetaInit2

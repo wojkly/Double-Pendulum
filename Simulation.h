@@ -23,8 +23,8 @@ public:
     double getTheta2(unsigned int id);
     unsigned int getColor(unsigned int id);
 
-    void setTheta1(int id, double theta1);
-    void setTheta2(int id, double theta2);
+    void setTheta1(unsigned int id, double theta1);
+    void setTheta2(unsigned int id, double theta2);
 
 };
 

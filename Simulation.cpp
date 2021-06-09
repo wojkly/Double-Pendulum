@@ -28,7 +28,7 @@ Simulation::Simulation(ArgumentParser argumentParser) {
 }
 
 Simulation::~Simulation() {
-    delete pendulums;
+    delete[] pendulums;
 }
 
 void Simulation::step() {
@@ -41,13 +41,13 @@ size_t Simulation::size() const {
     return size_;
 }
 
-void Simulation::setTheta1(int id, double theta1) {
+void Simulation::setTheta1(unsigned int id, double theta1) {
     if (id > size())
-        throw std::out_of_range("error, trying to set theta of nonexistent id");
+        throw std::out_of_range("error, trying to set theta1 of nonexistent id");
     pendulums[id].setTheta1(theta1);
 }
 
-void Simulation::setTheta2(int id, double theta2) {
+void Simulation::setTheta2(unsigned int id, double theta2) {
     if (id > size())
         throw std::out_of_range("error, trying to set theta2 of nonexistent id");
     pendulums[id].setTheta2(theta2);

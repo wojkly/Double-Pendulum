@@ -26,15 +26,15 @@ class Application {
     double L2Scaled;
 public:
     explicit Application(ArgumentParser argumentParser);
-    void initApp(Simulation simulation);
+    void initApp(Simulation simulation) const;
     void drawPendulums(RenderWindow &window, Simulation &simulation) const;
 
 
-    int pendulumGrabbed(RenderWindow &window, Simulation &simulation);
+    int pendulumGrabbed(RenderWindow &window, Simulation &simulation) const;
     double getMouseTheta(double x, double y, double xRelativeTo, double yRelativeTo) const;
     void pendulumMove(RenderWindow &window, Simulation &simulation, unsigned int  grabbed_id) const;
 
-    void handleMouse(RenderWindow &window, Simulation &simulation);
+    void handleMouse(RenderWindow &window, Simulation &simulation) const;
 
     Vector2f getPendulumCoords(double theta, Vector2f relativeTo, bool firstArm) const;
 
